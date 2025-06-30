@@ -196,7 +196,7 @@ footer {
   main { max-width: 97vw; padding: 1.1rem; }
   .logo { max-width: 95vw; }
 }
-/* Modern Nav Bar Styles */
+/* Modern Nav Bar Styles — Improved */
 .main-nav {
   width: 100%;
   background: rgba(30, 28, 45, 0.97);
@@ -206,38 +206,42 @@ footer {
   justify-content: space-between;
   position: fixed;
   top: 0; left: 0; z-index: 1000;
-  height: 62px;
-  padding: 0 42px;
+  height: 56px;
+  padding: 0 22px;
   backdrop-filter: blur(4px);
 }
 
-.nav-logo {
+.nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.nav-logo img {
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
+.nav-logo {
+  height: 38px;
+  max-width: 44px;
+  width: auto;
+  object-fit: contain;
   background: #23203a;
+  border-radius: 8px;
   border: 2px solid #ffc60033;
 }
 
-.nav-logo span {
+.brand-text {
   color: #ffc600;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 1px;
+  line-height: 1;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 26px;
+  gap: 10px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-link {
@@ -245,10 +249,12 @@ footer {
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  padding: 7px 18px;
+  padding: 7px 14px;
   border-radius: 19px;
   transition: background 0.18s, color 0.18s;
   position: relative;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -270,12 +276,25 @@ footer {
 
 /* Offset site content for fixed navbar */
 .site-wrapper, main, body {
-  margin-top: 62px;
-}
-@media (max-width: 700px) {
-  .main-nav { flex-direction: column; height: auto; padding: 0 10px; }
-  .nav-links { gap: 8px; flex-wrap: wrap; }
-  .site-wrapper, main, body { margin-top: 90px; }
-  .nav-logo span { display: none; }
+  margin-top: 56px;
 }
 
+@media (max-width: 850px) {
+  .main-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 6px 5px;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4px;
+    margin-top: 2px;
+    flex-wrap: wrap;
+  }
+  .site-wrapper, main, body { margin-top: 80px; }
+  .brand-text { font-size: 1rem; }
+  .nav-logo { height: 32px; max-width: 36px; }
+}
