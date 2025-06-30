@@ -6,35 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NameScape - RuneScape Name Marketplace</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/logo.png">
+  <link rel="icon" href="assets/icon.png">
 </head>
 <body>
-  <div class="background"></div>
+  <div id="particles-js"></div>
   <main>
     <!-- Hero Section -->
     <section class="hero">
       <img src="assets/logo.png" alt="NameScape Logo" class="logo">
       <h1>RuneScape Name Marketplace</h1>
-      <p class="subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community. <br>
-      </p>
+      <p class="subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community.</p>
       <a href="https://discord.gg/QP3s8qEcgA" class="cta">Join our Discord</a>
+      <div class="badges-row">
+        <div class="badge"><img src="assets/safe.svg" alt="Safe"/><span>Safe</span></div>
+        <div class="badge"><img src="assets/trusted.svg" alt="Trusted"/><span>Trusted</span></div>
+        <div class="badge"><img src="assets/fast.svg" alt="Fast"/><span>Fast</span></div>
+      </div>
       <div class="mascots">
-        <!-- Decorative mascots (add your dragonite, dragonair, dratini art here as <img> if you have transparent PNGs) -->
-        <!-- Example: -->
-        <!-- <img src="assets/dragonite.png" alt="Dragonite" class="mascot"> -->
-        <!-- <img src="assets/dragonair.png" alt="Dragonair" class="mascot"> -->
-        <!-- <img src="assets/dratini.png" alt="Dratini" class="mascot"> -->
+        <img src="assets/dragonite.png" alt="Dragonite Mascot" class="mascot">
+        <img src="assets/dragonair.png" alt="Dragonair Mascot" class="mascot">
+        <img src="assets/dratini.png" alt="Dratini Mascot" class="mascot">
       </div>
     </section>
 
-    <!-- Live Discord Widget -->
-    <section class="discord-section">
-      <h2>Live Discord Community Stats</h2>
-      <div class="discord-widget">
-        <!-- Official Discord Widget -->
-        <iframe src="https://discord.com/widget?id=285805486928822272&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-      </div>
-      <p class="note">* Join to see live vouches and trading activity!</p>
+    <section class="community-stats">
+      <h2>Join 2,000+ Trusted Name Traders</h2>
+      <p>Active since 2021 &bullet; Hundreds of vouches &bullet; Fastest swaps</p>
     </section>
 
     <!-- Trustpilot Placeholder -->
@@ -75,5 +72,25 @@
       <p>All trades at your own risk. © 2025 NameScape</p>
     </footer>
   </main>
+
+  <!-- Particle Background Script -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
+  <script>
+  tsParticles.load("particles-js", {
+    fullScreen: { enable: true, zIndex: 0 },
+    particles: {
+      number: { value: 60, density: { enable: true, area: 900 } },
+      color: { value: ["#ffc600", "#68a8ff", "#ffffff"] },
+      shape: { type: ["circle", "star"] },
+      opacity: { value: 0.42 },
+      size: { value: { min: 2, max: 4 }, random: true },
+      move: { enable: true, speed: 0.8, direction: "none", outMode: "bounce" },
+    },
+    background: {
+      color: "#1a1922",
+    },
+    detectRetina: true,
+  });
+  </script>
 </body>
 </html>
