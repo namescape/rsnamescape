@@ -22,30 +22,17 @@
         <div class="badge"><img src="assets/trusted.svg" alt="Trusted"/><span>Trusted</span></div>
         <div class="badge"><img src="assets/fast.svg" alt="Fast"/><span>Fast</span></div>
       </div>
-      <div class="mascots">
-        <img src="assets/dragonite.png" alt="Dragonite Mascot" class="mascot">
-        <img src="assets/dragonair.png" alt="Dragonair Mascot" class="mascot">
-        <img src="assets/dratini.png" alt="Dratini Mascot" class="mascot">
-      </div>
     </section>
 
+    <!-- Community Stats -->
     <section class="community-stats">
       <h2>Join 2,000+ Trusted Name Traders</h2>
       <p>Active since 2021 &bullet; Hundreds of vouches &bullet; Fastest swaps</p>
     </section>
 
-    <!-- Trustpilot Placeholder -->
-    <section class="reviews-section">
-      <h2>Trusted by the Name Trading Community</h2>
-      <div class="trustpilot-placeholder">
-        <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
-        <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
-      </div>
-    </section>
-
     <!-- FAQ Section -->
     <section class="faq-section">
-      <h2>FAQ</h2>
+      <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is RuneScape name trading allowed?</h3>
@@ -56,20 +43,34 @@
           <p>Always use our vetted Discord services. All trades are transparent with a proven safety record. Never trade outside official channels.</p>
         </div>
         <div class="faq-item">
-          <h3>Our team</h3>
-          <p>Our admins are trusted traders. Each has a long-standing, positive reputation.</p>
+          <h3>Who are the admins?</h3>
+          <p>Our admins are experienced and trusted name traders, each with a long-standing, positive reputation and public vouches.</p>
         </div>
         <div class="faq-item">
           <h3>How do I get started?</h3>
-          <p>Click "Join our Discord" above and browse or post in our marketplace channels. Our team will guide you step-by-step.</p>
+          <p>Click "Join our Discord" above, get verified, and browse or post in our marketplace channels. Our team will guide you step-by-step.</p>
         </div>
       </div>
     </section>
 
     <!-- About / Footer -->
     <footer>
-      <p>NameScape is the safest and most transparent RuneScape name trading hub. Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
-      <p>All trades at your own risk. © 2025 NameScape</p>
+      <section class="about">
+        <h2>About NameScape</h2>
+        <p>
+          NameScape is the most transparent RuneScape name trading hub, helping players safely buy, sell, and swap names since 2021.
+          Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.<br>
+          <b>All trades at your own risk. © 2025 NameScape</b>
+        </p>
+      </section>
+      <!-- Trustpilot Placeholder at Bottom -->
+      <section class="reviews-section">
+        <h2>Trusted by the Name Trading Community</h2>
+        <div class="trustpilot-placeholder">
+          <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
+          <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
+        </div>
+      </section>
     </footer>
   </main>
 
@@ -78,16 +79,18 @@
   <script>
   tsParticles.load("particles-js", {
     fullScreen: { enable: true, zIndex: 0 },
-    particles: {
-      number: { value: 60, density: { enable: true, area: 900 } },
-      color: { value: ["#ffc600", "#68a8ff", "#ffffff"] },
-      shape: { type: ["circle", "star"] },
-      opacity: { value: 0.42 },
-      size: { value: { min: 2, max: 4 }, random: true },
-      move: { enable: true, speed: 0.8, direction: "none", outMode: "bounce" },
-    },
     background: {
-      color: "#1a1922",
+      color: "#181622",
+      image: "radial-gradient(ellipse at 50% 20%, #3b364c 50%, #181622 100%)"
+    },
+    particles: {
+      number: { value: 95, density: { enable: true, area: 1000 } },
+      color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
+      shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
+      opacity: { value: 0.32 },
+      size: { value: { min: 2, max: 5 }, random: true },
+      move: { enable: true, speed: 1.2, direction: "none", outModes: "out" },
+      links: { enable: true, distance: 150, color: "#ffe29b", opacity: 0.15, width: 1 }
     },
     detectRetina: true,
   });
