@@ -1,3 +1,4 @@
+/* GLOBAL RESET & BASE */
 html, body {
   height: 100%;
   margin: 0;
@@ -19,11 +20,77 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+
+/* NAVIGATION BAR */
+.main-nav {
+  width: 100%;
+  background: rgba(30, 28, 45, 0.97);
+  box-shadow: 0 2px 12px 0 rgba(50,40,100,0.09);
+  position: fixed;
+  top: 0; left: 0; z-index: 1000;
+  height: 56px;
+  padding: 0;
+  backdrop-filter: blur(4px);
+}
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+.brand-text {
+  color: #ffc600;
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 7px 18px;
+  border-radius: 19px;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+  white-space: nowrap;
+}
+.nav-link:hover, .nav-link:focus {
+  background: #24203b;
+  color: #ffc600;
+}
+.discord-link {
+  background: linear-gradient(90deg, #7289da 0%, #5865f2 100%);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 6px 0 #3b364c28;
+  transition: background 0.21s;
+}
+.discord-link:hover {
+  background: #5865f2;
+  color: #fff;
+}
+
+/* Offset site content for fixed navbar */
 .site-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-top: 56px;
 }
+
+/* MAIN CONTENT */
 main {
   position: relative;
   z-index: 1;
@@ -44,6 +111,8 @@ main {
   filter: drop-shadow(0 0 12px #ffc60077);
   border-radius: 8px;
 }
+
+/* HERO SECTION */
 .hero {
   text-align: center;
   margin-bottom: 2.3rem;
@@ -103,6 +172,8 @@ main {
   margin-bottom: 0.17rem;
   filter: drop-shadow(0 0 7px #ffc60044);
 }
+
+/* COMMUNITY STATS */
 .community-stats {
   text-align: center;
   width: 100%;
@@ -118,6 +189,8 @@ main {
   color: #ffe09a;
   font-size: 1.07rem;
 }
+
+/* FAQ SECTION */
 .faq-section {
   width: 100%;
   margin-bottom: 2rem;
@@ -150,6 +223,8 @@ main {
   margin: 0;
   font-size: 1rem;
 }
+
+/* FOOTER / REVIEWS */
 footer {
   margin-top: auto;
   width: 100%;
@@ -192,109 +267,35 @@ footer {
   padding-top: 0.8rem;
   border-top: 1px solid #312f3d77;
 }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 0 12px;
+    max-width: 100vw;
+  }
+  .nav-links {
+    gap: 6px;
+  }
+  .brand-text {
+    font-size: 1.05rem;
+  }
+}
 @media (max-width: 700px) {
   main { max-width: 97vw; padding: 1.1rem; }
   .logo { max-width: 95vw; }
 }
-/* Modern Nav Bar Styles — Improved */
-.main-nav {
-  width: 100%;
-  background: rgba(30, 28, 45, 0.97);
-  box-shadow: 0 2px 12px 0 rgba(50,40,100,0.09);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0; left: 0; z-index: 1000;
-  height: 56px;
-  padding: 0 22px;
-  backdrop-filter: blur(4px);
-}
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-logo {
-  height: 38px;
-  max-width: 44px;
-  width: auto;
-  object-fit: contain;
-  background: #23203a;
-  border-radius: 8px;
-  border: 2px solid #ffc60033;
-}
-
-.brand-text {
-  color: #ffc600;
-  font-size: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  line-height: 1;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 7px 14px;
-  border-radius: 19px;
-  transition: background 0.18s, color 0.18s;
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.nav-link:hover, .nav-link:focus {
-  background: #24203b;
-  color: #ffc600;
-}
-
-.discord-link {
-  background: linear-gradient(90deg, #7289da 0%, #5865f2 100%);
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 0 1px 6px 0 #3b364c28;
-  transition: background 0.21s;
-}
-.discord-link:hover {
-  background: #5865f2;
-  color: #fff;
-}
-
-/* Offset site content for fixed navbar */
-.site-wrapper, main, body {
-  margin-top: 56px;
-}
-
-@media (max-width: 850px) {
-  .main-nav {
+@media (max-width: 600px) {
+  .nav-container {
     flex-direction: column;
-    height: auto;
-    padding: 6px 5px;
-    gap: 4px;
     align-items: flex-start;
+    height: auto;
+    padding: 0 4px;
   }
   .nav-links {
+    flex-wrap: wrap;
     width: 100%;
     justify-content: flex-start;
-    gap: 4px;
-    margin-top: 2px;
-    flex-wrap: wrap;
+    margin-top: 4px;
   }
-  .site-wrapper, main, body { margin-top: 80px; }
-  .brand-text { font-size: 1rem; }
-  .nav-logo { height: 32px; max-width: 36px; }
 }
