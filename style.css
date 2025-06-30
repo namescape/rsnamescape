@@ -1,11 +1,15 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+body {
+  min-height: 100vh;
+  background: #181622;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #e5e5f7;
-  min-height: 100vh;
   position: relative;
-  background: #181622;
+  box-sizing: border-box;
 }
 #particles-js {
   position: fixed;
@@ -15,11 +19,16 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 main {
   position: relative;
   z-index: 1;
   max-width: 600px;
-  margin: 3rem auto;
+  margin: 3rem auto 0 auto;
   background: #232341d9;
   border-radius: 18px;
   box-shadow: 0 4px 32px #0007;
@@ -142,23 +151,48 @@ main {
   font-size: 1rem;
 }
 footer {
-  margin-top: 2.5rem;
+  margin-top: auto;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
   text-align: center;
   color: #bbb7;
-  font-size: .99rem;
-  width: 100%;
-}
-.about h2 {
-  color: #ffc600;
-  margin-bottom: 0.45rem;
-  font-size: 1.15rem;
 }
 .reviews-section {
-  margin-top: 2.3rem;
+  margin: 2.6rem 0 0.4rem 0;
 }
 .reviews-section h2 {
   color: #7eb6ff;
   font-size: 1.13rem;
   margin-bottom: .45rem;
   text-shadow: 0 1px 10px #0004;
-  text-al
+  text-align: center;
+}
+.trustpilot-placeholder {
+  text-align: center;
+  margin-bottom: 1.3rem;
+  margin-top: 0.3rem;
+}
+.coming-soon {
+  color: #ffc600;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+.footer-disclaimer {
+  width: 100%;
+  text-align: center;
+  color: #ffd885;
+  font-size: 1.04rem;
+  font-weight: 600;
+  opacity: 0.82;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+  margin-top: 0.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #312f3d77;
+}
+@media (max-width: 700px) {
+  main { max-width: 97vw; padding: 1.1rem; }
+  .logo { max-width: 95vw; }
+}
