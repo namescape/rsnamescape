@@ -196,3 +196,86 @@ footer {
   main { max-width: 97vw; padding: 1.1rem; }
   .logo { max-width: 95vw; }
 }
+/* Modern Nav Bar Styles */
+.main-nav {
+  width: 100%;
+  background: rgba(30, 28, 45, 0.97);
+  box-shadow: 0 2px 12px 0 rgba(50,40,100,0.09);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0; left: 0; z-index: 1000;
+  height: 62px;
+  padding: 0 42px;
+  backdrop-filter: blur(4px);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: #23203a;
+  border: 2px solid #ffc60033;
+}
+
+.nav-logo span {
+  color: #ffc600;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 7px 18px;
+  border-radius: 19px;
+  transition: background 0.18s, color 0.18s;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link:focus {
+  background: #24203b;
+  color: #ffc600;
+}
+
+.discord-link {
+  background: linear-gradient(90deg, #7289da 0%, #5865f2 100%);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 6px 0 #3b364c28;
+  transition: background 0.21s;
+}
+.discord-link:hover {
+  background: #5865f2;
+  color: #fff;
+}
+
+/* Offset site content for fixed navbar */
+.site-wrapper, main, body {
+  margin-top: 62px;
+}
+@media (max-width: 700px) {
+  .main-nav { flex-direction: column; height: auto; padding: 0 10px; }
+  .nav-links { gap: 8px; flex-wrap: wrap; }
+  .site-wrapper, main, body { margin-top: 90px; }
+  .nav-logo span { display: none; }
+}
+
