@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #19181c;
+  background: radial-gradient(ellipse at 50% 20%, #2e2222 50%, #17161a 100%);
   color: #e5e5f7;
   min-height: 100vh;
   position: relative;
@@ -12,7 +12,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: url('assets/bg.jpg') center center/cover no-repeat, linear-gradient(120deg,#222 60%,#20202e 100%);
-  opacity: 0.30;
+  opacity: 0.20;
   z-index: 0;
   top: 0;
   left: 0;
@@ -20,46 +20,50 @@ body {
 main {
   position: relative;
   z-index: 1;
-  max-width: 600px;
+  max-width: 540px;
   margin: 3rem auto;
   background: #222230e0;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0007;
-  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px #0008;
+  padding: 2.2rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .logo {
   display: block;
   margin: 0 auto 1rem auto;
-  max-width: 340px;
-  filter: drop-shadow(0 0 12px #ffc60088);
+  max-width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px #ffdc66aa, 0 1px 10px #000a;
 }
 .hero {
   text-align: center;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 .hero h1 {
   color: #ffc600;
   font-size: 2.3rem;
   margin: 0.2em 0;
   text-shadow: 0 2px 4px #0008;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 1px;
 }
 .subtitle {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   margin-bottom: 1.5rem;
-  color: #aac9f6;
+  color: #c7e2ff;
 }
 .cta {
   display: inline-block;
   background: linear-gradient(90deg, #ffc600 70%, #7eb6ff 100%);
   color: #202020;
-  padding: 1rem 2.5rem;
-  font-size: 1.15rem;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.13rem;
   font-weight: bold;
   border-radius: 8px;
-  box-shadow: 0 4px 24px #2e2040bb;
+  box-shadow: 0 6px 24px #3c2a15bb;
   text-decoration: none;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
   transition: transform .12s cubic-bezier(.48,.28,.46,1.5);
 }
 .cta:hover {
@@ -68,33 +72,28 @@ main {
   color: #163353;
 }
 .mascots {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1.3rem;
 }
 .mascot {
-  max-height: 48px;
-}
-.trust-metrics {
-  display: flex;
-  justify-content: center;
-  gap: 1.1rem;
-  margin: 0.8rem 0 0.5rem 0;
-  color: #ffe09a;
-  font-size: 1rem;
+  max-height: 54px;
+  filter: drop-shadow(0 0 8px #ffc60088);
 }
 
 .discord-section, .reviews-section, .faq-section {
-  margin: 2.5rem 0 1.7rem 0;
+  margin: 2.2rem 0 1.7rem 0;
+  width: 100%;
 }
 .discord-section h2,
 .reviews-section h2,
 .faq-section h2 {
   color: #7eb6ff;
-  font-size: 1.4rem;
+  font-size: 1.36rem;
   margin-bottom: .7rem;
   text-shadow: 0 1px 10px #0004;
+  text-align: center;
 }
 .discord-widget {
   display: flex;
@@ -104,6 +103,10 @@ main {
   border-radius: 12px;
   box-shadow: 0 1px 12px #0003;
   padding: .6rem;
+  width: 100%;
+}
+.discord-widget iframe {
+  margin: 0 auto;
 }
 .note {
   font-size: .97rem;
@@ -125,6 +128,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
+  width: 100%;
 }
 .faq-item {
   background: #232341ee;
@@ -134,7 +138,7 @@ main {
 }
 .faq-item h3 {
   color: #7eb6ff;
-  font-size: 1.07rem;
+  font-size: 1.09rem;
   margin-bottom: .2rem;
 }
 .faq-item p {
@@ -142,13 +146,13 @@ main {
   font-size: 1rem;
 }
 footer {
-  margin-top: 2.4rem;
+  margin-top: 2.1rem;
   text-align: center;
-  color: #bbb7;
-  font-size: .98rem;
+  color: #bbb8;
+  font-size: .99rem;
 }
 @media (max-width: 700px) {
-  main { max-width: 97vw; padding: 1.1rem; }
-  .logo { max-width: 95vw; }
-  .discord-widget iframe { width: 95vw !important; }
+  main { max-width: 98vw; padding: 1.1rem; }
+  .logo { max-width: 92vw; }
+  .discord-widget iframe { width: 98vw !important; }
 }
