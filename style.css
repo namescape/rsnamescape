@@ -1,22 +1,154 @@
 body {
-  font-family: system-ui, Arial, sans-serif;
-  margin: 0; padding: 0;
-  background: #17171a; color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #19181c;
+  color: #e5e5f7;
+  min-height: 100vh;
+  position: relative;
 }
-main { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #23232b; border-radius: 8px; box-shadow: 0 2px 12px #0003; }
-h1, h2 { color: #ffc439; }
-a.cta {
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/bg.jpg') center center/cover no-repeat, linear-gradient(120deg,#222 60%,#20202e 100%);
+  opacity: 0.30;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 3rem auto;
+  background: #222230e0;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0007;
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+.logo {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 340px;
+  filter: drop-shadow(0 0 12px #ffc60088);
+}
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  color: #ffc600;
+  font-size: 2.3rem;
+  margin: 0.2em 0;
+  text-shadow: 0 2px 4px #0008;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: #aac9f6;
+}
+.cta {
   display: inline-block;
-  margin: 1rem 0;
-  padding: 1rem 2rem;
-  background: #5865f2;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
+  background: linear-gradient(90deg, #ffc600 70%, #7eb6ff 100%);
+  color: #202020;
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  transition: background .2s;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px #2e2040bb;
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+  transition: transform .12s cubic-bezier(.48,.28,.46,1.5);
 }
-a.cta:hover { background: #3b4cca; }
-footer { margin-top: 2rem; font-size: 0.9rem; color: #aaa; }
-ul, ol { margin-left: 2rem; }
+.cta:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #ffe29b 70%, #9ecbff 100%);
+  color: #163353;
+}
+.mascots {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.mascot {
+  max-height: 48px;
+}
+.trust-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin: 0.8rem 0 0.5rem 0;
+  color: #ffe09a;
+  font-size: 1rem;
+}
+
+.discord-section, .reviews-section, .faq-section {
+  margin: 2.5rem 0 1.7rem 0;
+}
+.discord-section h2,
+.reviews-section h2,
+.faq-section h2 {
+  color: #7eb6ff;
+  font-size: 1.4rem;
+  margin-bottom: .7rem;
+  text-shadow: 0 1px 10px #0004;
+}
+.discord-widget {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  background: #181924;
+  border-radius: 12px;
+  box-shadow: 0 1px 12px #0003;
+  padding: .6rem;
+}
+.note {
+  font-size: .97rem;
+  color: #aee0ff;
+  text-align: center;
+  margin-bottom: 0;
+}
+.trustpilot-placeholder {
+  text-align: center;
+  margin-bottom: 1.3rem;
+  margin-top: 0.5rem;
+}
+.coming-soon {
+  color: #ffc600;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.faq-item {
+  background: #232341ee;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0002;
+  padding: 1rem 1.3rem;
+}
+.faq-item h3 {
+  color: #7eb6ff;
+  font-size: 1.07rem;
+  margin-bottom: .2rem;
+}
+.faq-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+footer {
+  margin-top: 2.4rem;
+  text-align: center;
+  color: #bbb7;
+  font-size: .98rem;
+}
+@media (max-width: 700px) {
+  main { max-width: 97vw; padding: 1.1rem; }
+  .logo { max-width: 95vw; }
+  .discord-widget iframe { width: 95vw !important; }
+}
