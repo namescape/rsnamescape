@@ -34,17 +34,17 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="main-nav">
-  <div class="nav-container">
-    <span class="brand-text">NameScape</span>
-    <ul class="nav-links">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/faq.html" class="nav-link">FAQ</a></li>
-      <li><a href="/about.html" class="nav-link">About</a></li>
-      <li><a href="/services.html" class="nav-link">Services</a></li>
-      <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="nav-container">
+      <span class="brand-text">NameScape</span>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div id="particles-js"></div>
   <div class="site-wrapper">
@@ -68,26 +68,31 @@
         <p>Active since 2017 &bullet; Hundreds of vouches &bullet; Fastest swaps!</p>
       </section>
 
-    <!-- Trustpilot/Reviews Section at Bottom -->
-    <footer>
+      <!-- Trustpilot/Reviews Section at Bottom -->
       <section class="reviews-section">
         <h2>Trusted by the Name Trading Community</h2>
         <div class="trustpilot-placeholder">
           <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
           <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
         </div>
+
+        <!-- Vouch Slider START -->
         <section class="vouch-slider-section">
-  <h3 style="margin-bottom: 1rem; color: #ffc600;">Recent Discord Vouches</h3>
-  <div class="vouch-slider">
-    <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
-  </div>
-  <div class="vouch-slider-controls">
-    <button id="prevVouch" class="vouch-slider-btn">&#8592;</button>
-    <span id="vouchCounter" style="color:#ffe29b;font-size:1rem;">1 / 14</span>
-    <button id="nextVouch" class="vouch-slider-btn">&#8594;</button>
-  </div>
-</section>
+          <h3 style="margin-bottom: 1rem; color: #ffc600;">Recent Discord Vouches</h3>
+          <div class="vouch-slider">
+            <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
+          </div>
+          <div class="vouch-slider-controls">
+            <button id="prevVouch" class="vouch-slider-btn">&#8592;</button>
+            <span id="vouchCounter" style="color:#ffe29b;font-size:1rem;">1 / 14</span>
+            <button id="nextVouch" class="vouch-slider-btn">&#8594;</button>
+          </div>
+        </section>
+        <!-- Vouch Slider END -->
+
       </section>
+    </main>
+    <footer>
       <div class="footer-disclaimer">
         <i>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</i>
         <b>&copy; 2025 NameScape - All Rights Reserved</b>
@@ -97,67 +102,49 @@
   <!-- Particle Background Script -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
   <script>
-  tsParticles.load("particles-js", {
-    fullScreen: { enable: true, zIndex: 0 },
-    background: {
-      color: "#181622",
-      image: "radial-gradient(ellipse at 50% 20%, #3b364c 50%, #181622 100%)"
-    },
-    particles: {
-      number: { value: 95, density: { enable: true, area: 1000 } },
-      color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
-      shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
-      opacity: { value: 0.32 },
-      size: { value: { min: 2, max: 5 }, random: true },
-      move: { enable: true, speed: 1.2, direction: "none", outModes: "out" },
-      links: { enable: true, distance: 150, color: "#ffe29b", opacity: 0.15, width: 1 }
-    },
-    detectRetina: true,
-.vouch-slider-section {
-  margin: 2.5rem auto 0 auto;
-  text-align: center;
-  max-width: 460px;
-}
-.vouch-slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: .7rem;
-}
-.vouch-slider-img {
-  max-width: 100%;
-  max-height: 330px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px #0005;
-  border: 2px solid #232341;
-  background: #181622;
-  object-fit: contain;
-  transition: box-shadow 0.2s;
-}
-.vouch-slider-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-}
-.vouch-slider-btn {
-  background: #2a2840;
-  color: #ffc600;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.45rem;
-  width: 38px;
-  height: 38px;
-  cursor: pointer;
-  transition: background 0.2s;
-  box-shadow: 0 1px 4px #0003;
-}
-.vouch-slider-btn:hover {
-  background: #ffc600;
-  color: #181622;
-} 
-  });
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: true, zIndex: 0 },
+      background: {
+        color: "#181622",
+        image: "radial-gradient(ellipse at 50% 20%, #3b364c 50%, #181622 100%)"
+      },
+      particles: {
+        number: { value: 95, density: { enable: true, area: 1000 } },
+        color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
+        shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
+        opacity: { value: 0.32 },
+        size: { value: { min: 2, max: 5 }, random: true },
+        move: { enable: true, speed: 1.2, direction: "none", outModes: "out" },
+        links: { enable: true, distance: 150, color: "#ffe29b", opacity: 0.15, width: 1 }
+      },
+      detectRetina: true
+    });
+  </script>
+  <script>
+    // Number of vouches (change if you add more or less)
+    const totalVouches = 14; // Update if you have a different count
+    let currentVouch = 1;
+
+    const vouchImg = document.getElementById('vouchSliderImg');
+    const vouchCounter = document.getElementById('vouchCounter');
+    const prevBtn = document.getElementById('prevVouch');
+    const nextBtn = document.getElementById('nextVouch');
+
+    function showVouch(n) {
+      if (n < 1) n = totalVouches;
+      if (n > totalVouches) n = 1;
+      currentVouch = n;
+      vouchImg.src = `assets/vouches/${n}.png`;
+      vouchCounter.textContent = `${n} / ${totalVouches}`;
+    }
+
+    prevBtn.onclick = () => showVouch(currentVouch - 1);
+    nextBtn.onclick = () => showVouch(currentVouch + 1);
+
+    // Auto-cycle every 7 seconds
+    setInterval(() => {
+      showVouch(currentVouch + 1);
+    }, 7000);
   </script>
 </body>
 </html>
