@@ -13,6 +13,8 @@
   <meta property="og:image" content="https://rsnamescape.com/assets/logo.png">
   <meta property="og:url" content="https://rsnamescape.com/">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="stylesheet" href="style.css">
   <!-- JSON-LD Organization Schema -->
   <script type="application/ld+json">
   {
@@ -27,10 +29,12 @@
     "logo": "https://rsnamescape.com/assets/logo.png"
   }
   </script>
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Animated BG Effects + Particles -->
+  <div id="wow-bg"></div>
+  <div id="particles-js"></div>
+
   <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="nav-container">
@@ -46,7 +50,6 @@
     </div>
   </nav>
 
-  <div id="particles-js"></div>
   <div class="site-wrapper">
     <main>
       <!-- Hero Section -->
@@ -91,8 +94,8 @@
     </main>
     <footer>
       <div class="footer-disclaimer">
-        <i>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</i>
-        <b>&copy; 2025 NameScape - All Rights Reserved</b>
+        <i>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</i><br>
+        <span class="footer-copyright">&copy; 2025 NameScape - All Rights Reserved</span>
       </div>
     </footer>
   </div>
@@ -103,16 +106,16 @@
       fullScreen: { enable: true, zIndex: 0 },
       background: {
         color: "#181622",
-        image: "radial-gradient(ellipse at 50% 20%, #3b364c 50%, #181622 100%)"
+        image: ""
       },
       particles: {
-        number: { value: 95, density: { enable: true, area: 1000 } },
+        number: { value: 90, density: { enable: true, area: 900 } },
         color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
         shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
-        opacity: { value: 0.32 },
+        opacity: { value: 0.22 },
         size: { value: { min: 2, max: 5 }, random: true },
-        move: { enable: true, speed: 1.2, direction: "none", outModes: "out" },
-        links: { enable: true, distance: 150, color: "#ffe29b", opacity: 0.15, width: 1 }
+        move: { enable: true, speed: 0.8, direction: "none", outModes: "out" },
+        links: { enable: true, distance: 120, color: "#ffe29b", opacity: 0.09, width: 1 }
       },
       detectRetina: true
     });
