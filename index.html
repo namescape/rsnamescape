@@ -27,7 +27,6 @@
     "logo": "https://rsnamescape.com/assets/logo.png"
   }
   </script>
-  <!-- Link to sitemap -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,7 +35,8 @@
   <nav class="main-nav">
     <div class="nav-container">
       <span class="brand-text">NameScape</span>
-      <ul class="nav-links">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/faq.html" class="nav-link">FAQ</a></li>
         <li><a href="/about.html" class="nav-link">About</a></li>
@@ -75,20 +75,18 @@
           <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
           <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
         </div>
-
         <!-- Vouch Slider START -->
         <section class="vouch-slider-section">
+          <h3 style="margin-bottom: 1rem; color: #ffc600;">Recent Discord Vouches</h3>
           <div class="vouch-slider">
             <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
           </div>
           <div class="vouch-slider-controls">
             <button id="prevVouch" class="vouch-slider-btn">&#8592;</button>
-            <!--<span id="vouchCounter" style="color:#ffe29b;font-size:1rem;">1 / 14</span> -->
             <button id="nextVouch" class="vouch-slider-btn">&#8594;</button>
           </div>
         </section>
         <!-- Vouch Slider END -->
-
       </section>
     </main>
     <footer>
@@ -120,30 +118,31 @@
     });
   </script>
   <script>
-    // Number of vouches (change if you add more or less)
+    // Vouch slider (no counter)
     const totalVouches = 14; // Update if you have a different count
     let currentVouch = 1;
-
     const vouchImg = document.getElementById('vouchSliderImg');
-    const vouchCounter = document.getElementById('vouchCounter');
     const prevBtn = document.getElementById('prevVouch');
     const nextBtn = document.getElementById('nextVouch');
-
     function showVouch(n) {
       if (n < 1) n = totalVouches;
       if (n > totalVouches) n = 1;
       currentVouch = n;
       vouchImg.src = `assets/vouches/${n}.png`;
-      vouchCounter.textContent = `${n} / ${totalVouches}`;
     }
-
     prevBtn.onclick = () => showVouch(currentVouch - 1);
     nextBtn.onclick = () => showVouch(currentVouch + 1);
+    setInterval(() => { showVouch(currentVouch + 1); }, 7000);
 
-    // Auto-cycle every 7 seconds
-    setInterval(() => {
-      showVouch(currentVouch + 1);
-    }, 7000);
+    // Mobile hamburger nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(link =>
+      link.addEventListener('click', () => navLinks.classList.remove('show'))
+    );
   </script>
 </body>
 </html>
