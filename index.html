@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NameScape | RuneScape Name Marketplace</title>
-  <meta name="description" content="Buy, sell, and swap RuneScape and OSRS names safely with NameScape. Trusted since 2021.">
+  <title>RuneScape Name Transfer, Swap & Trading | NameScape Discord Marketplace</title>
+  <meta name="description" content="Buy, sell, and swap RuneScape and OSRS names safely with NameScape. Vetted traders, Discord escrow, and a trusted RSN trading marketplace since 2021.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="particles-js"></div>
   <nav class="main-nav">
     <div class="nav-container">
       <span class="brand-text">NameScape</span>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link active">Home</a></li>
         <li><a href="/about.html" class="nav-link">About</a></li>
@@ -23,44 +22,40 @@
       </ul>
     </div>
   </nav>
-
+  <div id="particles-js"></div>
   <div class="site-wrapper">
     <main>
-      <section class="hero-section main-card">
-        <img src="assets/logo.png" alt="NameScape Logo" class="hero-logo" />
+      <section class="main-card hero-section">
+        <img src="assets/logo.png" alt="NameScape Logo" class="hero-logo">
         <h1 class="hero-title">RuneScape Name Marketplace</h1>
-        <p class="hero-subtitle">
-          Buy, sell, and swap RuneScape names with our trusted Discord community.
-        </p>
-        <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank">Join our Discord</a>
+        <div class="hero-subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community.</div>
+        <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn">Join our Discord</a>
         <div class="hero-badges">
-          <div class="badge">
-            <img src="assets/safe.svg" alt="Safe" />
-            <span>Safe</span>
-          </div>
-          <div class="badge">
-            <img src="assets/trusted.svg" alt="Trusted" />
-            <span>Trusted</span>
-          </div>
-          <div class="badge">
-            <img src="assets/fast.svg" alt="Fast" />
-            <span>Fast</span>
-          </div>
+          <div class="badge"><img src="assets/safe.svg" alt="Safe"/><span>Safe</span></div>
+          <div class="badge"><img src="assets/trusted.svg" alt="Trusted"/><span>Trusted</span></div>
+          <div class="badge"><img src="assets/fast.svg" alt="Fast"/><span>Fast</span></div>
         </div>
       </section>
+
       <section class="community-highlight">
-        <h2>Join our community with over <span style="color:#ffc600;">2,000+</span> active members!</h2>
-        <p>Active since 2017 &bull; Hundreds of vouches &bull; Fastest swaps!</p>
+        <div class="text-blue" style="font-weight:700;font-size:1.12rem;margin-bottom:.6rem;">
+          Join our community with over <span style="color:#ffc600;">2,000+</span> active members!
+        </div>
+        <div style="color:#ffe09a;margin-bottom:1.2rem;">
+          Active since 2017 &bull; Hundreds of vouches &bull; Fastest swaps!
+        </div>
       </section>
+
       <section class="trust-section">
-        <h3 class="trust-title">Trusted by the Name Trading Community</h3>
+        <div class="trust-title">Trusted by the Name Trading Community</div>
         <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" style="display:inline-block;">
           <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
         </a>
-        <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
+        <div class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</div>
       </section>
+
       <section class="vouch-slider-section">
-        <h3>Recent Discord Vouches</h3>
+        <div style="font-weight:bold;color:#ffc600;margin-bottom:.9rem;font-size:1.1rem;">Recent Discord Vouches</div>
         <div class="vouch-slider">
           <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
         </div>
@@ -72,52 +67,16 @@
     </main>
     <footer>
       <div class="footer-disclaimer">
-        <i>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</i><br>
-        <span class="footer-copyright">&copy; 2025 NameScape - All Rights Reserved</span>
+        Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 <span style="color:#ffc600;">NameScape</span> - All Rights Reserved
       </div>
     </footer>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
   <script>
-    tsParticles.load("particles-js", {
-      fullScreen: { enable: true, zIndex: 0 },
-      background: { color: "#181622", image: "" },
-      particles: {
-        number: { value: 90, density: { enable: true, area: 900 } },
-        color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
-        shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
-        opacity: { value: 0.22 },
-        size: { value: { min: 2, max: 5 }, random: true },
-        move: { enable: true, speed: 0.8, direction: "none", outModes: "out" },
-        links: { enable: true, distance: 120, color: "#ffe29b", opacity: 0.09, width: 1 }
-      },
-      detectRetina: true
-    });
-
-    // Vouch slider - working and cycles automatically
-    const vouches = [
-      "assets/vouches/1.png","assets/vouches/2.png","assets/vouches/3.png","assets/vouches/4.png",
-      "assets/vouches/5.png","assets/vouches/6.png","assets/vouches/7.png","assets/vouches/8.png",
-      "assets/vouches/9.png","assets/vouches/10.png","assets/vouches/11.png","assets/vouches/12.png",
-      "assets/vouches/13.png","assets/vouches/14.png"
-    ];
-    let vouchIndex = 0;
-    const vouchImg = document.getElementById("vouchSliderImg");
-    document.getElementById("prevVouch").onclick = function(){
-      vouchIndex = (vouchIndex - 1 + vouches.length) % vouches.length;
-      vouchImg.src = vouches[vouchIndex];
-    }
-    document.getElementById("nextVouch").onclick = function(){
-      vouchIndex = (vouchIndex + 1) % vouches.length;
-      vouchImg.src = vouches[vouchIndex];
-    }
-    setInterval(function(){
-      vouchIndex = (vouchIndex + 1) % vouches.length;
-      vouchImg.src = vouches[vouchIndex];
-    }, 4000);
-
-    // Mobile hamburger nav
+    // Hamburger nav
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     navToggle.addEventListener('click', function() {
@@ -126,6 +85,38 @@
     navLinks.querySelectorAll('.nav-link').forEach(link =>
       link.addEventListener('click', () => navLinks.classList.remove('show'))
     );
+
+    // Vouch slider
+    const vouchImg = document.getElementById('vouchSliderImg');
+    const totalVouches = 14;
+    let currentVouch = 1;
+    function showVouch(n) {
+      if(n < 1) n = totalVouches;
+      if(n > totalVouches) n = 1;
+      currentVouch = n;
+      vouchImg.src = 'assets/vouches/' + n + '.png';
+    }
+    document.getElementById('prevVouch').onclick = () => showVouch(currentVouch-1);
+    document.getElementById('nextVouch').onclick = () => showVouch(currentVouch+1);
+
+    // Particle bg
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: true, zIndex: 0 },
+      background: {
+        color: "#181622",
+        image: "radial-gradient(ellipse at 50% 20%, #3b364c 50%, #181622 100%)"
+      },
+      particles: {
+        number: { value: 95, density: { enable: true, area: 1000 } },
+        color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
+        shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
+        opacity: { value: 0.32 },
+        size: { value: { min: 2, max: 5 }, random: true },
+        move: { enable: true, speed: 1.2, direction: "none", outModes: "out" },
+        links: { enable: true, distance: 150, color: "#ffe29b", opacity: 0.15, width: 1 }
+      },
+      detectRetina: true,
+    });
   </script>
 </body>
 </html>
