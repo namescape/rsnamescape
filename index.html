@@ -26,7 +26,7 @@
 
   <div class="site-wrapper">
     <main>
-      <section class="hero-section">
+      <section class="hero-section main-card">
         <img src="assets/logo.png" alt="NameScape Logo" class="hero-logo" />
         <h1 class="hero-title">RuneScape Name Marketplace</h1>
         <p class="hero-subtitle">
@@ -59,7 +59,6 @@
         </a>
         <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
       </section>
-      <!-- Vouch slider section goes here if you have one -->
       <section class="vouch-slider-section">
         <h3>Recent Discord Vouches</h3>
         <div class="vouch-slider">
@@ -96,7 +95,7 @@
       detectRetina: true
     });
 
-    // Vouch slider (replace with your logic)
+    // Vouch slider - working and cycles automatically
     const vouches = [
       "assets/vouches/1.png","assets/vouches/2.png","assets/vouches/3.png","assets/vouches/4.png",
       "assets/vouches/5.png","assets/vouches/6.png","assets/vouches/7.png","assets/vouches/8.png",
@@ -113,6 +112,10 @@
       vouchIndex = (vouchIndex + 1) % vouches.length;
       vouchImg.src = vouches[vouchIndex];
     }
+    setInterval(function(){
+      vouchIndex = (vouchIndex + 1) % vouches.length;
+      vouchImg.src = vouches[vouchIndex];
+    }, 4000);
 
     // Mobile hamburger nav
     const navToggle = document.getElementById('navToggle');
