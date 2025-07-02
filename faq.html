@@ -82,5 +82,16 @@
       </section>
     </main>
   </div>
+  <script>
+  // Mobile hamburger nav
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('show');
+  });
+  navLinks.querySelectorAll('.nav-link').forEach(link =>
+    link.addEventListener('click', () => navLinks.classList.remove('show'))
+  );
+</script>
 </body>
 </html>
