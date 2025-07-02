@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>FAQ | NameScape RuneScape Name Marketplace</title>
-  <meta name="description" content="Frequently asked questions about RuneScape name trading, snipers, safe transfers, and marketplace safety with NameScape.">
+  <meta name="description" content="Frequently asked questions about RuneScape name transfers, safety, and the NameScape marketplace.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar (copy-paste, matches your main site) -->
+  <div id="wow-bg"></div>
+  <div id="particles-js"></div>
   <nav class="main-nav">
     <div class="nav-container">
       <span class="brand-text">NameScape</span>
-      <ul class="nav-links">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/faq.html" class="nav-link">FAQ</a></li>
         <li><a href="/about.html" class="nav-link">About</a></li>
@@ -21,77 +24,84 @@
       </ul>
     </div>
   </nav>
-
   <div class="site-wrapper">
     <main>
       <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
+        <h2 style="color:#ffc600;text-align:center;margin-bottom:1.3em;">Frequently Asked Questions</h2>
         <div class="faq-list">
-
           <div class="faq-item">
-            <h3><u>Is RuneScape name trading bannable?</u></h3>
+            <h3>Is buying/selling RuneScape names bannable?</h3>
             <p>
-              <b>No.</b> Trading display names for <b>RuneScape gold only</b> is not against Jagex rules. <b>Real-world trading (RWT) for money is bannable.</b>
-              Our marketplace strictly deals with in-game gold for names—never real money, accounts, or third-party currencies.
+              Trading display names for <b>RuneScape gold only</b> is not against the RuneScape rules. Jagex prohibits real-world trading (RWT) for money or items outside the game, but gold-for-name trades are permitted. <b>We never facilitate RWT or account sales.</b>
             </p>
           </div>
-
           <div class="faq-item">
-            <h3><u>How dangerous are name snipers?</u></h3>
+            <h3>How do I protect myself from “name snipers”?</h3>
             <p>
-              <b>Extremely dangerous.</b> Automated bots and human snipers are waiting 24/7 for rare name drops. If you try to transfer a name by yourself, you will almost certainly lose it. <b>Never attempt a transfer without a trusted transferrer.</b>
+              <b>Do NOT transfer a name yourself.</b> Sniping bots and scripts scan for new name releases 24/7 and will steal your name instantly. Only use a vetted, experienced transfer service like NameScape. We use proprietary timing and automation to ensure your transfer is safe and private.
             </p>
           </div>
-
           <div class="faq-item">
-            <h3><u>How do I safely transfer a RuneScape name?</u></h3>
+            <h3>How do I know I’m trading with a real admin?</h3>
             <p>
-              <b>Always use a NameScape trusted transferrer and open a ticket inside our Discord server.</b> We use secure, time-tested methods and the safest automation to prevent snipers from stealing your name. <b>Never attempt solo transfers or use unknown services.</b>
+              <b>Always make a ticket inside our Discord server.</b> <u>Never trust DMs out of nowhere</u>, even from users pretending to be staff—scammers copy our usernames and avatars. <b>We will never DM you first.</b> Tickets keep you safe from imposters.
             </p>
           </div>
-
           <div class="faq-item">
-            <h3><u>Can I trust DMs from admins or staff?</u></h3>
+            <h3>What payment methods do you allow?</h3>
             <p>
-              <b>No.</b> Never trust unsolicited Discord DMs—even if they appear to be from staff. <b>We will never DM you first.</b> All trades and support are handled inside a Discord ticket on our server. This protects you from impersonators and scammers.
+              <b>RuneScape gold only.</b> We do not allow real money trading, accounts, or items. This keeps both you and us compliant with the game’s rules and safe from bans.
             </p>
           </div>
-
           <div class="faq-item">
-            <h3><u>What should I do if someone offers a private deal?</u></h3>
+            <h3>Can you transfer names between Old School and RS3?</h3>
             <p>
-              <b>Create a ticket with us.</b> If you’re offered a deal outside of an official ticket, it’s almost always a scam. <b>Only trade inside tickets created in our Discord.</b> Never send gold or account info outside of our official process.
+              Yes—our transferers are experienced with both game versions. Please open a ticket for specific instructions and timing.
             </p>
           </div>
-
           <div class="faq-item">
-            <h3><u>How do I get started?</u></h3>
+            <h3>How do I start a safe name trade?</h3>
             <p>
-              Join our Discord, open a ticket, and our team will guide you step-by-step. You'll get safe, real-time help for your name trade or transfer.
+              Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank" style="color:#7eb6ff;font-weight:600;">Discord</a>, open a ticket, and follow the instructions of a vetted admin. <b>Do not communicate outside of tickets.</b> All trades are logged and supported step by step.
             </p>
           </div>
-
-          <div class="faq-item">
-            <h3><u>What are NameScape's services?</u></h3>
-            <p>
-              We offer professional, secure display name transfers on RuneScape, handled by trusted and experienced staff. Our goal is to keep your names safe from snipers and scammers—<b>no exceptions</b>.
-            </p>
-          </div>
-
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-disclaimer">
+        <i>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</i><br>
+        <span class="footer-copyright">&copy; 2025 NameScape - All Rights Reserved</span>
+      </div>
+    </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
   <script>
-  // Mobile hamburger nav
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('show');
-  });
-  navLinks.querySelectorAll('.nav-link').forEach(link =>
-    link.addEventListener('click', () => navLinks.classList.remove('show'))
-  );
-</script>
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: true, zIndex: 0 },
+      background: { color: "#181622", image: "" },
+      particles: {
+        number: { value: 90, density: { enable: true, area: 900 } },
+        color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
+        shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
+        opacity: { value: 0.22 },
+        size: { value: { min: 2, max: 5 }, random: true },
+        move: { enable: true, speed: 0.8, direction: "none", outModes: "out" },
+        links: { enable: true, distance: 120, color: "#ffe29b", opacity: 0.09, width: 1 }
+      },
+      detectRetina: true
+    });
+  </script>
+  <script>
+    // Mobile hamburger nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(link =>
+      link.addEventListener('click', () => navLinks.classList.remove('show'))
+    );
+  </script>
 </body>
 </html>
