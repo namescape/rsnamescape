@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* RESET & BASE */
 html, body {
   height: 100%;
   margin: 0;
@@ -47,6 +47,54 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+/* Stylish Nav Pill Buttons */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-link {
+  display: inline-block;
+  background: #232341;
+  color: #ffc600;
+  font-weight: bold;
+  font-size: 1.07rem;
+  padding: 0.62em 1.45em;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px #0003;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  transition: background .14s, color .14s, transform .14s, box-shadow .14s;
+  border: 2px solid transparent;
+  position: relative;
+  z-index: 2;
+}
+.nav-link:hover, .nav-link.active, .nav-link:focus {
+  background: linear-gradient(90deg,#ffc600 50%,#7eb6ff 100%);
+  color: #181622;
+  box-shadow: 0 4px 18px #ffc60055;
+  border: 2px solid #ffc600cc;
+  transform: translateY(-2px) scale(1.035);
+}
+.discord-link {
+  background: linear-gradient(90deg,#7289da 0%,#5865f2 100%);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 1px 6px 0 #3b364c28;
+  border: 2px solid #7289da55;
+}
+.discord-link:hover, .discord-link.active {
+  background: linear-gradient(90deg, #ffc600 50%, #7eb6ff 100%);
+  color: #181622;
+  border: 2px solid #ffc600cc;
+}
+
+/* Hamburger Menu */
 .nav-toggle {
   display: none;
   background: none;
@@ -58,40 +106,8 @@ body {
   padding: 4px 8px 4px 0;
   transition: color .12s;
 }
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 7px 18px;
-  border-radius: 19px;
-  transition: background 0.18s, color 0.18s;
-  display: inline-block;
-  white-space: nowrap;
-}
-.nav-link:hover, .nav-link:focus {
-  background: #24203b;
-  color: #ffc600;
-}
-.discord-link {
-  background: linear-gradient(90deg, #7289da 0%, #5865f2 100%);
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 0 1px 6px 0 #3b364c28;
-  transition: background 0.21s;
-}
-.discord-link:hover {
-  background: #5865f2;
-  color: #fff;
-}
+
+/* Main Content Wrapper */
 .site-wrapper {
   min-height: 100vh;
   display: flex;
@@ -99,36 +115,7 @@ body {
   margin-top: 56px;
 }
 
-/* TABS BAR */
-.tabs-bar {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin: 2.2rem 0 2.6rem 0;
-}
-.tab-link {
-  background: rgba(35,34,65,0.86);
-  color: #ffe29b;
-  font-weight: 700;
-  font-size: 1.14rem;
-  border-radius: 12px 12px 0 0;
-  padding: 0.78em 2.2em 0.9em 2.2em;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  border: 2px solid transparent;
-  transition: background .13s, color .13s, border .15s;
-  box-shadow: 0 3px 16px #18162222;
-  position: relative;
-  top: 3px;
-}
-.tab-link.active,
-.tab-link:hover {
-  background: #181622;
-  color: #ffc600;
-  border-bottom: 2px solid #ffc600;
-}
-
-/* MAIN "CARD" SECTIONS */
+/* CARD STYLES FOR FAQ/ABOUT/SERVICES */
 .faq-section, .about-section, .services-section {
   background: rgba(30,28,50,0.98);
   border-radius: 22px;
@@ -147,38 +134,43 @@ body {
   text-shadow: 0 3px 14px #0006;
   letter-spacing: .02em;
 }
-.faq-list {
+
+/* Carded List Items */
+.faq-list, .about-list, .services-list {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.3rem;
   width: 100%;
 }
-.faq-item {
+.faq-item, .about-item, .service-item {
   background: #232341f0;
   border-radius: 14px;
   box-shadow: 0 2px 18px #1d1a3445;
   padding: 1.3rem 1.3rem 1.1rem 1.3rem;
   margin-bottom: 0.3em;
-  transition: box-shadow 0.15s;
-  border-left: 4px solid #ffc60070;
+  border-left: 4px solid #ffc600bb;
   border-right: 1.5px solid #68a8ff44;
+  position: relative;
+  transition: box-shadow 0.15s;
 }
-.faq-item:last-child {
+.faq-item:last-child, .about-item:last-child, .service-item:last-child {
   margin-bottom: 0;
 }
-.faq-item h3 {
+.faq-item h3, .about-item h3, .service-item h3 {
   color: #ffc600;
-  font-size: 1.17rem;
+  font-size: 1.16rem;
   margin: 0 0 .2rem 0;
   font-weight: 700;
   letter-spacing: .01em;
   text-shadow: 0 1.5px 6px #0003;
 }
-.faq-item p {
+.faq-item p, .about-item p, .service-item p {
   margin: 0.2em 0 0 0;
-  font-size: 1.07rem;
+  font-size: 1.06rem;
   line-height: 1.58;
 }
+
+/* About/Services "List" Within Card */
 .about-section ul, .services-section ul {
   margin-left: 1.2em;
   margin-bottom: 1.1em;
@@ -187,22 +179,6 @@ body {
 }
 .about-section li, .services-section li {
   margin-bottom: 0.4em;
-}
-.service-item {
-  background: #232341f0;
-  border-radius: 14px;
-  box-shadow: 0 2px 18px #1d1a3445;
-  padding: 1.1rem 1.2rem 1rem 1.2rem;
-  margin-bottom: 1.2em;
-  border-left: 4px solid #68a8ff70;
-  border-right: 1.5px solid #ffc60044;
-}
-.service-item:last-child { margin-bottom: 0; }
-.service-item h3 {
-  color: #7eb6ff;
-  font-size: 1.11rem;
-  margin-bottom: 0.22em;
-  font-weight: 700;
 }
 
 /* Footer */
@@ -236,7 +212,7 @@ footer {
   margin-top: .4em;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE — Mobile Nav, Cards, etc */
 @media (max-width: 900px) {
   .nav-container {
     padding: 0 12px;
@@ -249,23 +225,6 @@ footer {
     font-size: 1.05rem;
   }
 }
-@media (max-width: 700px) {
-  main { max-width: 97vw; padding: 1.1rem; }
-  .logo { max-width: 95vw; }
-  .tabs-bar { gap: 6px; }
-  .tab-link { font-size: 1.02rem; padding: 0.6em 1.2em 0.7em 1.2em; }
-  .faq-section, .about-section, .services-section {
-    padding: 1.15rem 0.45rem 1.2rem 0.45rem;
-    border-radius: 13px;
-  }
-}
-@media (max-width: 530px) {
-  .faq-section, .about-section, .services-section { font-size: .98rem; }
-  .nav-container { padding: 0 5px; }
-  .tab-link { font-size: .96rem; padding: .5em .5em .5em .5em; }
-}
-
-/* Mobile Hamburger */
 @media (max-width: 750px) {
   .nav-toggle { display: block; }
   .nav-links {
@@ -299,8 +258,20 @@ footer {
     font-size: 1.13rem;
   }
 }
+@media (max-width: 700px) {
+  main { max-width: 97vw; padding: 1.1rem; }
+  .logo { max-width: 95vw; }
+  .faq-section, .about-section, .services-section {
+    padding: 1.15rem 0.45rem 1.2rem 0.45rem;
+    border-radius: 13px;
+  }
+}
+@media (max-width: 530px) {
+  .faq-section, .about-section, .services-section { font-size: .98rem; }
+  .nav-container { padding: 0 5px; }
+}
 
-/* Scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   background: #232341;
