@@ -61,8 +61,19 @@
       <div style="color:#ffc600; font-style:italic; font-size:0.97rem;">Reviews coming soon! Meanwhile, check our Discord vouches.</div>
       <div style="margin-top:1.4rem;">
         <div style="font-weight:bold; color:#ffc600;">Recent Discord Vouches</div>
-        <!-- Add your vouch slider code here (previously provided) -->
-        <!-- ... -->
+        <div style="margin-top:1.4rem;">
+        <div style="font-weight:bold; color:#ffc600; margin-bottom:0.8rem;">Recent Discord Vouches</div>
+        <div class="vouch-slider-section">
+        <div class="vouch-slider">
+        <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
+        </div>
+        <div class="vouch-slider-controls">
+        <button id="prevVouch" class="vouch-slider-btn" aria-label="Previous vouch">&#8592;</button>
+        <button id="nextVouch" class="vouch-slider-btn" aria-label="Next vouch">&#8594;</button>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -74,5 +85,23 @@
       &copy; 2025 NameScape - All Rights Reserved
     </div>
   </footer>
+<script>
+  // ---- Discord Vouch Slider ----
+  const totalVouches = 14; // Change to your actual total
+  let vouchIdx = 1;
+  const vouchImg = document.getElementById('vouchSliderImg');
+  document.getElementById('prevVouch').onclick = function() {
+    vouchIdx = (vouchIdx - 2 + totalVouches) % totalVouches + 1;
+    vouchImg.src = `assets/vouches/${vouchIdx}.png`;
+  };
+  document.getElementById('nextVouch').onclick = function() {
+    vouchIdx = vouchIdx % totalVouches + 1;
+    vouchImg.src = `assets/vouches/${vouchIdx}.png`;
+  };
+  vouchImg.onerror = function() {
+    this.src = "assets/vouches/1.png";
+    vouchIdx = 1;
+  };
+</script>
 </body>
 </html>
