@@ -2,46 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RuneScape Name Transfer, Swap & Trading | NameScape Discord Marketplace</title>
-  <meta name="description" content="Buy, sell, and swap RuneScape and OSRS names safely with NameScape. Vetted traders, Discord escrow, and a trusted RSN trading marketplace since 2021.">
-  <meta name="keywords" content="RuneScape name swap, RSN trading, OSRS name transfer, RuneScape Discord marketplace, buy RuneScape name, sell RSN, runescape name trading, osrs name market, rsn marketplace">
+  <title>NameScape | RuneScape Name Marketplace</title>
+  <meta name="description" content="Buy, sell, and swap RuneScape and OSRS names safely with NameScape. Trusted since 2021.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/icon.png">
-  <!-- Open Graph -->
-  <meta property="og:title" content="RuneScape Name Transfer & Swap | NameScape Marketplace">
-  <meta property="og:description" content="Trusted RuneScape & OSRS name trading Discord. Safe, fast, and transparent RSN swaps and transfers.">
-  <meta property="og:image" content="https://rsnamescape.com/assets/logo.png">
-  <meta property="og:url" content="https://rsnamescape.com/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="stylesheet" href="style.css">
-  <!-- JSON-LD Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NameScape",
-    "url": "https://rsnamescape.com/",
-    "description": "RuneScape Name Swap, Transfer, and Trading Marketplace on Discord",
-    "sameAs": [
-      "https://discord.gg/QP3s8qEcgA"
-    ],
-    "logo": "https://rsnamescape.com/assets/logo.png"
-  }
-  </script>
 </head>
 <body>
-  <!-- Animated BG Effects + Particles -->
-  <div id="wow-bg"></div>
   <div id="particles-js"></div>
-
-  <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="nav-container">
       <span class="brand-text">NameScape</span>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/" class="nav-link active">Home</a></li>
         <li><a href="/about.html" class="nav-link">About</a></li>
         <li><a href="/services.html" class="nav-link">Services</a></li>
         <li><a href="/faq.html" class="nav-link">FAQ</a></li>
@@ -52,46 +26,49 @@
 
   <div class="site-wrapper">
     <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <img src="assets/logo.png" alt="NameScape Logo" class="logo">
-        <h1>RuneScape Name Marketplace</h1>
-        <p class="subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community.</p>
-        <a href="https://discord.gg/QP3s8qEcgA" class="cta">Join our Discord</a>
-        <div class="badges-row">
-          <div class="badge"><img src="assets/safe.svg" alt="Safe"/><span>Safe</span></div>
-          <div class="badge"><img src="assets/trusted.svg" alt="Trusted"/><span>Trusted</span></div>
-          <div class="badge"><img src="assets/fast.svg" alt="Fast"/><span>Fast</span></div>
+      <section class="hero-section">
+        <img src="assets/logo.png" alt="NameScape Logo" class="hero-logo" />
+        <h1 class="hero-title">RuneScape Name Marketplace</h1>
+        <p class="hero-subtitle">
+          Buy, sell, and swap RuneScape names with our trusted Discord community.
+        </p>
+        <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank">Join our Discord</a>
+        <div class="hero-badges">
+          <div class="badge">
+            <img src="assets/safe.svg" alt="Safe" />
+            <span>Safe</span>
+          </div>
+          <div class="badge">
+            <img src="assets/trusted.svg" alt="Trusted" />
+            <span>Trusted</span>
+          </div>
+          <div class="badge">
+            <img src="assets/fast.svg" alt="Fast" />
+            <span>Fast</span>
+          </div>
         </div>
       </section>
-
-      <!-- Community Stats -->
-      <section class="community-stats">
-        <h2>Join our community with over 2,000+ active members!</h2>
-        <p>Active since 2017 &bullet; Hundreds of vouches &bullet; Fastest swaps!</p>
+      <section class="community-highlight">
+        <h2>Join our community with over <span style="color:#ffc600;">2,000+</span> active members!</h2>
+        <p>Active since 2017 &bull; Hundreds of vouches &bull; Fastest swaps!</p>
       </section>
-
-      <!-- Trustpilot/Reviews Section at Bottom -->
-      <section class="reviews-section">
-        <h2>Trusted by the Name Trading Community</h2>
-          <div class="trustpilot-placeholder">
-            <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" rel="noopener">
-              <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
-            </a>
-            <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
-          </div>
-        <!-- Vouch Slider START -->
-        <section class="vouch-slider-section">
-          <h3 style="margin-bottom: 1rem; color: #ffc600;">Recent Discord Vouches</h3>
-          <div class="vouch-slider">
-            <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
-          </div>
-          <div class="vouch-slider-controls">
-            <button id="prevVouch" class="vouch-slider-btn">&#8592;</button>
-            <button id="nextVouch" class="vouch-slider-btn">&#8594;</button>
-          </div>
-        </section>
-        <!-- Vouch Slider END -->
+      <section class="trust-section">
+        <h3 class="trust-title">Trusted by the Name Trading Community</h3>
+        <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" style="display:inline-block;">
+          <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" style="height:32px;">
+        </a>
+        <p class="coming-soon">Reviews coming soon! Meanwhile, check our Discord vouches.</p>
+      </section>
+      <!-- Vouch slider section goes here if you have one -->
+      <section class="vouch-slider-section">
+        <h3>Recent Discord Vouches</h3>
+        <div class="vouch-slider">
+          <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
+        </div>
+        <div class="vouch-slider-controls">
+          <button id="prevVouch" class="vouch-slider-btn">&#8592;</button>
+          <button id="nextVouch" class="vouch-slider-btn">&#8594;</button>
+        </div>
       </section>
     </main>
     <footer>
@@ -101,15 +78,12 @@
       </div>
     </footer>
   </div>
-  <!-- Particle Background Script -->
+
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
   <script>
     tsParticles.load("particles-js", {
       fullScreen: { enable: true, zIndex: 0 },
-      background: {
-        color: "#181622",
-        image: ""
-      },
+      background: { color: "#181622", image: "" },
       particles: {
         number: { value: 90, density: { enable: true, area: 900 } },
         color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
@@ -121,23 +95,24 @@
       },
       detectRetina: true
     });
-  </script>
-  <script>
-    // Vouch slider (no counter)
-    const totalVouches = 14; // Update if you have a different count
-    let currentVouch = 1;
-    const vouchImg = document.getElementById('vouchSliderImg');
-    const prevBtn = document.getElementById('prevVouch');
-    const nextBtn = document.getElementById('nextVouch');
-    function showVouch(n) {
-      if (n < 1) n = totalVouches;
-      if (n > totalVouches) n = 1;
-      currentVouch = n;
-      vouchImg.src = `assets/vouches/${n}.png`;
+
+    // Vouch slider (replace with your logic)
+    const vouches = [
+      "assets/vouches/1.png","assets/vouches/2.png","assets/vouches/3.png","assets/vouches/4.png",
+      "assets/vouches/5.png","assets/vouches/6.png","assets/vouches/7.png","assets/vouches/8.png",
+      "assets/vouches/9.png","assets/vouches/10.png","assets/vouches/11.png","assets/vouches/12.png",
+      "assets/vouches/13.png","assets/vouches/14.png"
+    ];
+    let vouchIndex = 0;
+    const vouchImg = document.getElementById("vouchSliderImg");
+    document.getElementById("prevVouch").onclick = function(){
+      vouchIndex = (vouchIndex - 1 + vouches.length) % vouches.length;
+      vouchImg.src = vouches[vouchIndex];
     }
-    prevBtn.onclick = () => showVouch(currentVouch - 1);
-    nextBtn.onclick = () => showVouch(currentVouch + 1);
-    setInterval(() => { showVouch(currentVouch + 1); }, 7000);
+    document.getElementById("nextVouch").onclick = function(){
+      vouchIndex = (vouchIndex + 1) % vouches.length;
+      vouchImg.src = vouches[vouchIndex];
+    }
 
     // Mobile hamburger nav
     const navToggle = document.getElementById('navToggle');
