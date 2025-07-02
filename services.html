@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Services | NameScape RuneScape Name Marketplace</title>
-  <meta name="description" content="Discover all the trusted RuneScape name transfer and trading services offered by NameScape.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="wow-bg"></div>
-  <div id="particles-js"></div>
   <nav class="main-nav">
     <div class="nav-container">
       <span class="brand-text">NameScape</span>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/about.html" class="nav-link">About</a></li>
-        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li><a href="/services.html" class="nav-link active">Services</a></li>
         <li><a href="/faq.html" class="nav-link">FAQ</a></li>
         <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
       </ul>
@@ -26,79 +22,27 @@
   </nav>
   <div class="site-wrapper">
     <main>
-      <section class="services-section">
-        <h2 style="color:#ffc600;text-align:center;margin-bottom:1em;">Our Services</h2>
-        <div class="services-list" style="max-width:660px;margin:0 auto;">
-          <div class="service-item">
-            <h3 style="color:#7eb6ff;">Safe Name Transfers</h3>
-            <p>
-              Our core service: safely transferring RuneScape display names between accounts using the safest timing and automation available. All transfers are done <b>for RuneScape gold only</b>—never real-world money.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3 style="color:#7eb6ff;">Name Middlemanning</h3>
-            <p>
-              Let us act as a trusted middleman for your gold-for-name trades. We protect both buyer and seller with full transparency and Discord ticket logging.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3 style="color:#7eb6ff;">Sniper-Proof Monitoring</h3>
-            <p>
-              We use proprietary software and human oversight to make sure your name is never exposed to public “sniping” bots during the transfer process.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3 style="color:#7eb6ff;">Custom Consulting</h3>
-            <p>
-              Unsure if your name is safe, or want to plan a large batch of transfers? Our experts offer guidance, planning, and hands-on assistance—always through our Discord ticket system.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3 style="color:#7eb6ff;">Vouch & Verification System</h3>
-            <p>
-              Every trade is logged and vouched in public Discord channels, so you always know you’re dealing with a reputable, established service.
-            </p>
-          </div>
+      <section class="services-card">
+        <h1>Our Services</h1>
+        <div class="services-content">
+          <div class="services-section-title">Safe Name Transfers</div>
+          <div class="services-section-text">Our core service: safely transferring RuneScape display names between accounts using the safest timing and automation available. All transfers are done for <b>RuneScape gold only</b>—never real-world money.</div>
         </div>
-        <div style="text-align:center;margin-top:2.5em;">
-          <a href="https://discord.gg/QP3s8qEcgA" class="cta" target="_blank">Start a Ticket Now</a>
+        <div class="services-content">
+          <div class="services-section-title">Name Middlemanning</div>
+          <div class="services-section-text">Let us act as a trusted middleman for your gold-for-name trades. We protect both buyer and seller with full transparency and Discord ticket logging.</div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-disclaimer">
-        <i>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</i><br>
-        <span class="footer-copyright">&copy; 2025 NameScape - All Rights Reserved</span>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
-  <script>
-    tsParticles.load("particles-js", {
-      fullScreen: { enable: true, zIndex: 0 },
-      background: { color: "#181622", image: "" },
-      particles: {
-        number: { value: 90, density: { enable: true, area: 900 } },
-        color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
-        shape: { type: ["circle", "star", "polygon"], polygon: { nb_sides: 5 } },
-        opacity: { value: 0.22 },
-        size: { value: { min: 2, max: 5 }, random: true },
-        move: { enable: true, speed: 0.8, direction: "none", outModes: "out" },
-        links: { enable: true, distance: 120, color: "#ffe29b", opacity: 0.09, width: 1 }
-      },
-      detectRetina: true
-    });
-  </script>
-  <script>
-    // Mobile hamburger nav
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('show');
-    });
-    navLinks.querySelectorAll('.nav-link').forEach(link =>
-      link.addEventListener('click', () => navLinks.classList.remove('show'))
-    );
-  </script>
-</body>
-</html>
+        <div class="services-content">
+          <div class="services-section-title">Sniper-Proof Monitoring</div>
+          <div class="services-section-text">We use proprietary software and human oversight to make sure your name is never exposed to public "sniping" bots during the transfer process.</div>
+        </div>
+        <div class="services-content">
+          <div class="services-section-title">Custom Consulting</div>
+          <div class="services-section-text">Unsure if your name is safe, or want to plan a large batch of transfers? Our experts offer guidance, planning, and hands-on assistance—always through our Discord ticket system.</div>
+        </div>
+        <div class="services-content">
+          <div class="services-section-title">Vouch & Verification System</div>
+          <div class="services-section-text">Every trade is logged and vouched in public Discord channels, so you always know you’re dealing with a reputable, established service.</div>
+        </div>
+        <div class="services-content" style="text-align:center;">
+          <a href="https://discord.gg/QP3s8qEcgA" target="_blank" class="cta-btn" s_
