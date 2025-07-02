@@ -3,64 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>About | NameScape RuneScape Name Marketplace</title>
+  <meta name="description" content="Learn more about NameScape: the trusted RuneScape name trading community since 2021.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="main-nav">
-  <div class="nav-container">
-    <span class="brand-text">NameScape</span>
-    <button class="nav-toggle" id="navToggle">&#9776;</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/about.html" class="nav-link">About</a></li>
-      <li><a href="/services.html" class="nav-link">Services</a></li>
-      <li><a href="/faq.html" class="nav-link">FAQ</a></li>
-      <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <span class="brand-text">NameScape</span>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/about.html" class="nav-link active" aria-current="page">About</a></li>
+        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li><a href="/faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
+      </ul>
+      <button class="hamburger" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
   <div class="site-wrapper">
-    <main>
-      <section class="about-card">
-        <h1>About NameScape</h1>
-        <div class="about-content">
-          <p><b>NameScape</b> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2021, we help players safely buy, sell, and swap display names using <b>RuneScape gold only</b>—never real-world trading, cash, or accounts.</p>
-          <ul>
-            <li>Trusted by thousands of RuneScape name traders</li>
-            <li>All services handled in secure Discord tickets</li>
-            <li>Zero tolerance for scammers and imposters</li>
-            <li>No DMs from staff—ever. Tickets only.</li>
-            <li>All trades are transparent and publicly vouched</li>
-          </ul>
-          <p>
-            Our team consists of experienced, vetted transferrers who use the safest automation and timing methods to protect your display name from snipers. <b>Every transfer and trade is private, logged, and handled step-by-step to keep you and your name secure.</b>
-          </p>
-          <p>
-            <b>Ready to get started?</b> Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank" style="color:#7eb6ff;font-weight:600;">Discord</a>, open a ticket, and let our team take care of the rest.
-          </p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-disclaimer">
-        Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
-      </div>
-      <div class="footer-copyright">
-        &copy; 2025 <span style="color:#ffc600;">NameScape</span> - All Rights Reserved
-      </div>
-    </footer>
+    <div class="card about-box">
+      <h2 class="section-title">About NameScape</h2>
+      <p>
+        <b>NameScape</b> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2021, we help players safely buy, sell, and swap display names using <b>RuneScape gold only</b>—never real-world trading, cash, or accounts.
+      </p>
+      <ul>
+        <li>Trusted by thousands of RuneScape name traders</li>
+        <li>All services handled in secure Discord tickets</li>
+        <li>Zero tolerance for scammers and imposters</li>
+        <li>No DMs from staff—ever. Tickets only.</li>
+        <li>All trades are transparent and publicly vouched</li>
+      </ul>
+      <p>
+        Our team consists of experienced, vetted transferrers who use the safest automation and timing methods to protect your display name from snipers. <b>Every transfer and trade is private, logged, and handled step-by-step to keep you and your name secure.</b>
+      </p>
+      <p>
+        <b>Ready to get started?</b> Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and let our team take care of the rest.
+      </p>
+    </div>
   </div>
+  <footer>
+    <div class="footer-disclaimer">
+      Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 NameScape - All Rights Reserved
+    </div>
+  </footer>
   <script>
-    // Hamburger nav
+    // Hamburger Menu
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', function() {
+    navToggle.onclick = function() {
       navLinks.classList.toggle('show');
-    });
-    navLinks.querySelectorAll('.nav-link').forEach(link =>
-      link.addEventListener('click', () => navLinks.classList.remove('show'))
-    );
+      navToggle.setAttribute('aria-expanded', navLinks.classList.contains('show') ? "true" : "false");
+    };
   </script>
 </body>
 </html>
