@@ -9,11 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated BG Effects + Particles (reuse sitewide) -->
-  <div id="wow-bg"></div>
   <div id="particles-js"></div>
-
-  <!-- Navbar (consistent sitewide) -->
   <nav class="main-nav">
     <div class="nav-container">
       <span class="brand-text">NameScape</span>
@@ -27,12 +23,17 @@
       </ul>
     </div>
   </nav>
-
+  <div class="tabs-bar">
+    <a href="/" class="tab-link">Home</a>
+    <a href="/faq.html" class="tab-link">FAQ</a>
+    <a href="/about.html" class="tab-link active">About</a>
+    <a href="/services.html" class="tab-link">Services</a>
+  </div>
   <div class="site-wrapper">
     <main>
       <section class="about-section">
-        <h2 style="color:#ffc600;text-align:center;margin-bottom:0.8em;">About NameScape</h2>
-        <div class="about-content" style="max-width:660px;margin:0 auto;">
+        <h2>About NameScape</h2>
+        <div class="about-content">
           <p>
             <b>NameScape</b> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2021, we help players safely buy, sell, and swap display names using <b>RuneScape gold only</b>—never real-world trading, cash, or accounts.
           </p>
@@ -59,16 +60,11 @@
       </div>
     </footer>
   </div>
-
-  <!-- Particle BG -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.2.3/tsparticles.bundle.min.js"></script>
   <script>
     tsParticles.load("particles-js", {
       fullScreen: { enable: true, zIndex: 0 },
-      background: {
-        color: "#181622",
-        image: ""
-      },
+      background: { color: "#181622", image: "" },
       particles: {
         number: { value: 90, density: { enable: true, area: 900 } },
         color: { value: ["#ffc600", "#68a8ff", "#fff", "#7d5cff"] },
