@@ -4,91 +4,82 @@
   <meta charset="UTF-8">
   <title>RuneScape Name Transfer, Swap & Trading | NameScape Discord Marketplace</title>
   <meta name="description" content="Buy, sell, and swap RuneScape and OSRS names safely with NameScape. Vetted traders, Discord escrow, and a trusted RSN trading marketplace since 2021.">
-  <meta name="keywords" content="RuneScape name swap, RSN trading, OSRS name transfer, RuneScape Discord marketplace, buy RuneScape name, sell RSN, runescape name trading, osrs name market, rsn marketplace">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- NAVIGATION -->
   <nav class="main-nav">
-    <div class="nav-container">
-      <span class="brand-text">NameScape</span>
-      <ul class="nav-links">
-        <li><a href="/" class="nav-link active">Home</a></li>
-        <li><a href="/about.html" class="nav-link">About</a></li>
-        <li><a href="/services.html" class="nav-link">Services</a></li>
-        <li><a href="/faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
-      </ul>
-    </div>
+    <span class="brand-text">NameScape</span>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link active">Home</a></li>
+      <li><a href="/about.html" class="nav-link">About</a></li>
+      <li><a href="/services.html" class="nav-link">Services</a></li>
+      <li><a href="/faq.html" class="nav-link">FAQ</a></li>
+      <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
+    </ul>
   </nav>
-
   <div class="site-wrapper">
-    <main>
-      <section class="card hero-card">
-        <img src="assets/logo.png" alt="NameScape Logo" class="logo">
-        <h1 class="hero-title">RuneScape Name Marketplace</h1>
-        <p class="hero-subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community.</p>
-        <a href="https://discord.gg/QP3s8qEcgA" class="cta">Join our Discord</a>
-        <div class="badge-row">
-          <div class="badge"><img src="assets/safe.svg" alt="Safe"/><span>Safe</span></div>
-          <div class="badge"><img src="assets/trusted.svg" alt="Trusted"/><span>Trusted</span></div>
-          <div class="badge"><img src="assets/fast.svg" alt="Fast"/><span>Fast</span></div>
-        </div>
-      </section>
-
-      <section class="card stats-card">
-        <h2 class="community-title">Join our community with over <span class="highlight">2,000+ active members!</span></h2>
-        <p class="community-subtitle">Active since 2017 &bull; Hundreds of vouches &bull; Fastest swaps!</p>
-      </section>
-
-      <section class="card trust-card">
-        <div class="trust-title">Trusted by the Name Trading Community</div>
-        <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" rel="noopener">
-          <img src="assets/trustpilot.svg" alt="Trustpilot" class="trustpilot-icon">
+    <section class="card" style="margin-bottom: 2.4rem;">
+      <img src="assets/logo.png" alt="NameScape Logo" class="hero-logo">
+      <h1 class="hero-title">RuneScape Name Marketplace</h1>
+      <p class="hero-desc">Buy, sell, and swap RuneScape names with our trusted Discord community.</p>
+      <a href="https://discord.gg/QP3s8qEcgA" class="cta" target="_blank">Join our Discord</a>
+      <div class="badges-row">
+        <div class="badge"><img src="assets/safe.svg" alt="Safe"/><span>Safe</span></div>
+        <div class="badge"><img src="assets/trusted.svg" alt="Trusted"/><span>Trusted</span></div>
+        <div class="badge"><img src="assets/fast.svg" alt="Fast"/><span>Fast</span></div>
+      </div>
+    </section>
+    <section class="card community-stats" style="padding:1.3rem 1.2rem 1.6rem 1.2rem;">
+      <div class="community-stats-title">Join our community with over <span style="color:#ffc600;">2,000+ active members!</span></div>
+      <div class="community-stats-text">
+        Active since 2017 &bullet; Hundreds of vouches &bullet; Fastest swaps!
+      </div>
+    </section>
+    <section class="card" style="padding:1.5rem 1.2rem 2.2rem 1.2rem;">
+      <div style="text-align:center;">
+        <div style="color:#7eb6ff; font-weight:bold; margin-bottom:0.4rem;">Trusted by the Name Trading Community</div>
+        <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" class="trustpilot-link">
+          <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot Logo" class="trustpilot-img">
         </a>
-        <div class="trustpilot-caption">
+        <div style="color:#ffc600; margin:0.45rem 0 0.9rem 0; font-style:italic; font-size:1.07rem;">
           Reviews coming soon! Meanwhile, check our Discord vouches.
         </div>
-        <div class="vouch-slider-section">
-          <div class="vouch-slider-title">Recent Discord Vouches</div>
-          <div class="vouch-slider">
-            <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
-          </div>
-          <div class="vouch-slider-controls">
-            <button id="prevVouch" class="vouch-slider-btn" aria-label="Previous">&#8592;</button>
-            <button id="nextVouch" class="vouch-slider-btn" aria-label="Next">&#8594;</button>
-          </div>
+      </div>
+      <section class="vouch-slider-section">
+        <div class="vouch-slider-title">Recent Discord Vouches</div>
+        <div class="vouch-slider">
+          <img id="vouchSliderImg" src="assets/vouches/1.png" alt="Vouch Screenshot" class="vouch-slider-img">
+        </div>
+        <div class="vouch-slider-controls">
+          <button id="prevVouch" class="vouch-slider-btn">&#8592;</button>
+          <button id="nextVouch" class="vouch-slider-btn">&#8594;</button>
         </div>
       </section>
-    </main>
+    </section>
   </div>
-
-  <footer class="footer">
-    <div class="footer-text">
-      <span class="footer-disclaimer">Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</span>
-      <br>
-      <span class="footer-copyright">&copy; 2025 NameScape - All Rights Reserved</span>
+  <footer>
+    <div class="footer-disclaimer">
+      Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 NameScape - All Rights Reserved
     </div>
   </footer>
-
-  <!-- Vouch Slider Script -->
   <script>
-    const totalVouches = 14; // Change this if you have a different count
-    let vouchIdx = 1;
+    // VOUCH SLIDER JS
+    const vouchCount = 14; // update if you have more vouches
+    let currentVouch = 1;
     const vouchImg = document.getElementById('vouchSliderImg');
     document.getElementById('prevVouch').onclick = function() {
-      vouchIdx = (vouchIdx - 2 + totalVouches) % totalVouches + 1;
-      vouchImg.src = `assets/vouches/${vouchIdx}.png`;
-    };
+      currentVouch = (currentVouch - 1 < 1) ? vouchCount : currentVouch - 1;
+      vouchImg.src = `assets/vouches/${currentVouch}.png`;
+    }
     document.getElementById('nextVouch').onclick = function() {
-      vouchIdx = vouchIdx % totalVouches + 1;
-      vouchImg.src = `assets/vouches/${vouchIdx}.png`;
-    };
-    vouchImg.onerror = function() {
-      this.src = "assets/vouches/1.png";
-      vouchIdx = 1;
-    };
+      currentVouch = (currentVouch + 1 > vouchCount) ? 1 : currentVouch + 1;
+      vouchImg.src = `assets/vouches/${currentVouch}.png`;
+    }
   </script>
 </body>
 </html>
