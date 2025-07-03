@@ -2,112 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NameScape RuneScape Name Marketplace</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NameScape | RuneScape Name Marketplace</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for hamburger + arrows -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar (put your navbar here if needed) -->
 
-  <!-- Page Container -->
-  <div class="main-container">
-    <!-- Hero Card -->
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">NameScape</div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord">Discord</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN WRAPPER -->
+  <main class="main-container">
+    <!-- HERO CARD -->
     <section class="card">
-      <img src="assets/logo.png" alt="NameScape" class="main-banner" />
+      <img src="assets/logo.png" alt="NameScape Logo" class="main-banner">
       <h1>RuneScape Name Marketplace</h1>
-      <p class="subtitle">
-        Buy, sell, and swap RuneScape names with our trusted Discord community.
-      </p>
-      <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn">Join our Discord</a>
+      <p class="subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community.</p>
+      <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank">Join our Discord</a>
       <div class="features-row">
         <div class="feature">
-          <span class="feature-icon"><i class="fa-solid fa-circle-check"></i></span>
+          <img src="assets/safe.svg" alt="Safe" class="feature-icon">
           <div>Safe</div>
         </div>
         <div class="feature">
-          <span class="feature-icon"><i class="fa-solid fa-star"></i></span>
+          <img src="assets/trusted.svg" alt="Trusted" class="feature-icon">
           <div>Trusted</div>
         </div>
         <div class="feature">
-          <span class="feature-icon"><i class="fa-solid fa-bolt"></i></span>
+          <img src="assets/fast.svg" alt="Fast" class="feature-icon">
           <div>Fast</div>
         </div>
       </div>
     </section>
 
-    <!-- Community Card -->
+    <!-- COMMUNITY CARD -->
     <section class="card">
-      <div class="community-header">
-        Join our community with over <span class="highlight">2,000+ active members!</span>
-      </div>
-      <div class="community-subtext">
-        Active since 2017 • Hundreds of vouches • Fastest swaps!
-      </div>
+      <h2>Join our community with over <span class="highlight">2,000+ active members!</span></h2>
+      <p>Active since 2017 • Hundreds of vouches • Fastest swaps!</p>
     </section>
 
-    <!-- Trust Card -->
+    <!-- TRUSTPILOT CARD -->
     <section class="card">
-      <div class="trust-header">Trusted by the Name Trading Community</div>
+      <h2>Trusted by the Name Trading Community</h2>
       <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot-logo" />
+        <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg"
+             alt="Trustpilot" class="trustpilot-logo">
       </a>
-      <div class="trust-desc">
-        <em>Reviews coming soon! Meanwhile, check our Discord vouches.</em>
-      </div>
+      <p class="trust-desc"><em>Reviews coming soon! Meanwhile, check our Discord vouches.</em></p>
     </section>
 
-    <!-- Discord Vouches Card -->
+    <!-- VOUCHES CAROUSEL CARD -->
     <section class="card">
-      <div class="vouches-header">Recent Discord Vouches</div>
+      <h2>Recent Discord Vouches</h2>
       <div class="vouch-carousel">
-        <img src="assets/vouch1.png" id="vouchImg" class="vouch-img">
+        <img src="assets/vouches/1.png" id="vouchImg" class="vouch-img" alt="Discord Vouch">
         <div class="vouch-controls">
           <button id="prev-vouch" class="arrow-btn"><i class="fa fa-arrow-left"></i></button>
-          <span id="vouch-counter">1 / 3</span>
+          <span id="vouch-counter">1 / 14</span>
           <button id="next-vouch" class="arrow-btn"><i class="fa fa-arrow-right"></i></button>
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
-  <footer>
-    <div class="footer-legal">
-      <div>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</div>
-      <div>&copy; 2025 NameScape – All Rights Reserved</div>
-    </div>
+  <!-- FOOTER -->
+  <footer class="footer-legal">
+    <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
+    <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
+
+  <!-- SCRIPTS -->
   <script>
-    // Example script for carousel (replace vouch images with your real images)
-    const vouches = [
-      "assets/vouches/1.png",
-      "assets/vouches/2.png",
-      "assets/vouches/3.png",
-      "assets/vouches/4.png",
-      "assets/vouches/5.png",
-      "assets/vouches/6.png",
-      "assets/vouches/7.png",
-      "assets/vouches/8.png",
-      "assets/vouches/9.png",
-      "assets/vouches/10.png",
-      "assets/vouches/11.png",
-      "assets/vouches/12.png",
-      "assets/vouches/13.png",
-      "assets/vouches/14.png"
-    ];
-    let vouchIdx = 0;
-    const vouchImg = document.getElementById('vouchImg');
-    const vouchCounter = document.getElementById('vouch-counter');
-    document.getElementById('prev-vouch').onclick = function() {
-      vouchIdx = (vouchIdx - 1 + vouches.length) % vouches.length;
-      vouchImg.src = vouches[vouchIdx];
-      vouchCounter.textContent = `${vouchIdx+1} / ${vouches.length}`;
-    };
-    document.getElementById('next-vouch').onclick = function() {
-      vouchIdx = (vouchIdx + 1) % vouches.length;
-      vouchImg.src = vouches[vouchIdx];
-      vouchCounter.textContent = `${vouchIdx+1} / ${vouches.length}`;
-    };
+    // Hamburger toggle
+    document.getElementById('hamburger')
+      .addEventListener('click', ()=> document.getElementById('navLinks').classList.toggle('show'));
+
+    // Vouch carousel
+    const vouches = Array.from({length:14}, (_,i)=>`assets/vouches/${i+1}.png`);
+    let idx = 0;
+    const img = document.getElementById('vouchImg'),
+          ctr = document.getElementById('vouch-counter');
+    document.getElementById('prev-vouch')
+      .onclick = ()=>{ idx=(idx-1+vouches.length)%vouches.length; img.src=vouches[idx]; ctr.textContent=`${idx+1} / ${vouches.length}`; };
+    document.getElementById('next-vouch')
+      .onclick = ()=>{ idx=(idx+1)%vouches.length; img.src=vouches[idx]; ctr.textContent=`${idx+1} / ${vouches.length}`; };
   </script>
 </body>
 </html>
