@@ -2,124 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NameScape RuneScape Name Marketplace</title>
+  <title>NameScape | RuneScape Name Marketplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RuneScape name trading, swapping, and vouch services. Safe, trusted, and fast." />
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Icons (or use your own images/icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="main-nav">
-    <div class="nav-container">
-      <span class="brand-text">NameScape</span>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <span class="brand">NameScape</span>
       <button class="hamburger" id="hamburger" aria-label="Open navigation">
-        <span></span><span></span><span></span>
+        <i class="fas fa-bars"></i>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="nav-link active">Home</a></li>
-        <li><a href="/about.html" class="nav-link">About</a></li>
-        <li><a href="/services.html" class="nav-link">Services</a></li>
-        <li><a href="/faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank">Discord</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero-section">
-      <img src="assets/logo.png" alt="NameScape Logo" class="hero-logo">
+      <img src="assets/namescape-banner.png" alt="NameScape" class="hero-banner">
       <h1>RuneScape Name Marketplace</h1>
-      <p class="hero-subtitle">
+      <p class="subtitle">
         Buy, sell, and swap RuneScape names with our trusted Discord community.
       </p>
       <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank">Join our Discord</a>
-      <div class="features-row">
+      <div class="features">
         <div class="feature-card">
-          <img src="assets/safe-icon.svg" alt="Safe" class="feature-icon">
+          <i class="fa fa-check-circle"></i>
           <div>Safe</div>
         </div>
         <div class="feature-card">
-          <img src="assets/trusted-icon.svg" alt="Trusted" class="feature-icon">
+          <i class="fa fa-star"></i>
           <div>Trusted</div>
         </div>
         <div class="feature-card">
-          <img src="assets/fast-icon.svg" alt="Fast" class="feature-icon">
+          <i class="fa fa-bolt"></i>
           <div>Fast</div>
         </div>
       </div>
     </section>
 
-    <!-- Community Stats Section -->
     <section class="community-section">
       <h2>
-        Join our community with over <span class="highlight">2,000+</span> active members!
+        Join our community with over <span class="highlight">2,000+ active members!</span>
       </h2>
-      <p class="community-details">
+      <p>
         Active since 2017 &bull; Hundreds of vouches &bull; Fastest swaps!
       </p>
     </section>
 
-    <!-- Trustpilot / Vouch Section -->
     <section class="trust-section">
       <h3>Trusted by the Name Trading Community</h3>
       <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" class="trustpilot-link">
-        <img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot-img">
+        <img src="assets/trustpilot-logo.svg" alt="Trustpilot" class="trustpilot-img">
       </a>
-      <div class="trustpilot-info">
+      <p class="trust-message">
         Reviews coming soon! Meanwhile, check our Discord vouches.
-      </div>
-      <div class="vouch-section">
-        <h4>Recent Discord Vouches</h4>
-        <div class="vouch-carousel" id="vouchCarousel">
-          <button class="vouch-arrow" id="vouchPrev">&#8592;</button>
-          <img src="assets/vouches/1.png" alt="Vouch 1" id="vouchImage">
-          <button class="vouch-arrow" id="vouchNext">&#8594;</button>
+      </p>
+    </section>
+
+    <section class="vouch-section">
+      <h3>Recent Discord Vouches</h3>
+      <div class="vouch-carousel">
+        <!-- Your vouch images go here; sample below -->
+        <img src="assets/vouches/1.png" alt="Discord Vouch" class="vouch-img" id="vouch-img">
+        <div class="carousel-controls">
+          <button id="prev-vouch"><i class="fa fa-arrow-left"></i></button>
+          <span id="vouch-counter">1 / 14</span>
+          <button id="next-vouch"><i class="fa fa-arrow-right"></i></button>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-disclaimer">
-      Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
-    </div>
-    <div class="footer-copyright">
-      &copy; 2025 NameScape - All Rights Reserved
+    <div class="footer-legal">
+      <div>
+        Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
+      </div>
+      <div>
+        &copy; 2025 NameScape – All Rights Reserved
+      </div>
     </div>
   </footer>
 
   <script>
-    // Hamburger for mobile
+    // Hamburger mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
+    hamburger.onclick = () => {
       navLinks.classList.toggle('show');
-    });
-
-    // Vouch carousel (assumes 1.png, 2.png, ..., 14.png in assets/vouches/)
-    const vouchImg = document.getElementById('vouchImage');
-    const vouchPrev = document.getElementById('vouchPrev');
-    const vouchNext = document.getElementById('vouchNext');
-    let vouchIdx = 1;
-    const VOUCH_COUNT = 14;
-
-    function updateVouch() {
-      vouchImg.src = `assets/vouches/${vouchIdx}.png`;
-      vouchImg.alt = `Vouch ${vouchIdx}`;
-    }
-    vouchPrev.onclick = () => {
-      vouchIdx = vouchIdx === 1 ? VOUCH_COUNT : vouchIdx - 1;
-      updateVouch();
     };
-    vouchNext.onclick = () => {
-      vouchIdx = vouchIdx === VOUCH_COUNT ? 1 : vouchIdx + 1;
-      updateVouch();
+    // Vouch carousel (sample logic)
+    const vouches = [
+      "assets/vouches/1.png",
+      "assets/vouches/2.png",
+      "assets/vouches/3.png",
+      // ...add all your vouch images here
+    ];
+    let vouchIdx = 0;
+    const vouchImg = document.getElementById('vouch-img');
+    const vouchCounter = document.getElementById('vouch-counter');
+    document.getElementById('prev-vouch').onclick = function() {
+      vouchIdx = (vouchIdx - 1 + vouches.length) % vouches.length;
+      vouchImg.src = vouches[vouchIdx];
+      vouchCounter.textContent = `${vouchIdx+1} / ${vouches.length}`;
     };
-    // Responsive fix for closing nav on click (mobile)
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('show'));
-    });
+    document.getElementById('next-vouch').onclick = function() {
+      vouchIdx = (vouchIdx + 1) % vouches.length;
+      vouchImg.src = vouches[vouchIdx];
+      vouchCounter.textContent = `${vouchIdx+1} / ${vouches.length}`;
+    };
   </script>
 </body>
 </html>
