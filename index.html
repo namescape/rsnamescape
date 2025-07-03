@@ -5,7 +5,7 @@
   <title>NameScape | RuneScape Name Marketplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for Icons (or use your own images/icons) -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
   </nav>
 
   <main>
-    <section class="hero-section">
+    <section class="card-section hero-section">
       <img src="assets/namescape-banner.png" alt="NameScape" class="hero-banner">
       <h1>RuneScape Name Marketplace</h1>
       <p class="subtitle">
@@ -72,11 +72,11 @@
     <section class="vouch-section">
       <h3>Recent Discord Vouches</h3>
       <div class="vouch-carousel">
-        <!-- Your vouch images go here; sample below -->
+        <!-- Example vouch images (replace with real screenshots) -->
         <img src="assets/vouches/1.png" alt="Discord Vouch" class="vouch-img" id="vouch-img">
         <div class="carousel-controls">
           <button id="prev-vouch"><i class="fa fa-arrow-left"></i></button>
-          <span id="vouch-counter">1 / 14</span>
+          <span id="vouch-counter">1 / 3</span>
           <button id="next-vouch"><i class="fa fa-arrow-right"></i></button>
         </div>
       </div>
@@ -105,8 +105,7 @@
     const vouches = [
       "assets/vouches/1.png",
       "assets/vouches/2.png",
-      "assets/vouches/3.png",
-      // ...add all your vouch images here
+      "assets/vouches/3.png"
     ];
     let vouchIdx = 0;
     const vouchImg = document.getElementById('vouch-img');
