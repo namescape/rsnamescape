@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>About | NameScape</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+
+  <!-- NAVBAR (identical to index.html) -->
   <nav class="navbar">
-    <div class="navbar-container">
-      <span class="brand">NameScape</span>
-      <button class="hamburger" id="hamburger" aria-label="Open navigation">
-        <i class="fas fa-bars"></i>
-      </button>
+    <div class="nav-container">
+      <div class="brand">NameScape</div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank">Discord</a></li>
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="about.html"      class="nav-link active">About</a></li>
+        <li><a href="services.html"   class="nav-link">Services</a></li>
+        <li><a href="faq.html"        class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" 
+               class="nav-link discord" target="_blank">Discord</a></li>
       </ul>
     </div>
   </nav>
-  <main>
-    <section class="page-card">
+
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+    <section class="card">
       <h1>About NameScape</h1>
-      <p><strong>NameScape</strong> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2021, we help players safely buy, sell, and swap display names using <strong>RuneScape gold only</strong>—never real-world trading, cash, or accounts.</p>
+      <p>
+        <strong>NameScape</strong> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2021, we help players safely buy, sell, and swap display names using <strong>RuneScape gold only</strong>—never real-world trading, cash, or accounts.
+      </p>
       <ul>
         <li>Trusted by thousands of RuneScape name traders</li>
         <li>All services handled in secure Discord tickets</li>
@@ -34,21 +40,27 @@
         <li>No DMs from staff—ever. Tickets only.</li>
         <li>All trades are transparent and publicly vouched</li>
       </ul>
-      <p>Our team consists of experienced, vetted transferrers who use the safest automation and timing methods to protect your display name from snipers. <b>Every transfer and trade is private, logged, and handled step-by-step to keep you and your name secure.</b></p>
-      <p><b>Ready to get started?</b> Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and let our team take care of the rest.</p>
+      <p>
+        Our team consists of experienced, vetted transferrers who use the safest automation and timing methods to protect your display name from snipers. <strong>Every transfer and trade is private, logged, and handled step-by-step to keep you and your name secure.</strong>
+      </p>
+      <p>
+        <strong>Ready to get started?</strong> Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and let our team take care of the rest.
+      </p>
     </section>
   </main>
-  <footer>
-    <div class="footer-legal">
-      <div>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</div>
-      <div>&copy; 2025 NameScape – All Rights Reserved</div>
-    </div>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="footer-legal">
+    <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
+    <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
+
+  <!-- HAMBURGER SCRIPT -->
   <script>
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.onclick = () => navLinks.classList.toggle('show');
+    document.getElementById('hamburger')
+      .addEventListener('click', ()=>
+        document.getElementById('navLinks').classList.toggle('show')
+      );
   </script>
 </body>
 </html>
