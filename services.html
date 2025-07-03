@@ -3,50 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>Services | NameScape RuneScape Name Marketplace</title>
-  <meta name="description" content="NameScape offers safe RuneScape name transfers, middlemanning, sniping protection, and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NameScape offers safe name transfers, middlemanning, consulting, sniper-proof monitoring and more for RuneScape name trading.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- NAVIGATION -->
   <nav class="main-nav">
-    <span class="brand-text">NameScape</span>
-    <ul class="nav-links">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/about.html" class="nav-link">About</a></li>
-      <li><a href="/services.html" class="nav-link active">Services</a></li>
-      <li><a href="/faq.html" class="nav-link">FAQ</a></li>
-      <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord-link" target="_blank">Discord</a></li>
-    </ul>
+    <div class="nav-container">
+      <span class="brand-text">NameScape</span>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" target="_blank" class="nav-link discord-link">Discord</a></li>
+      </ul>
+      <button class="hamburger" id="navHamburger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-mobile" id="navMobile"></ul>
+    </div>
   </nav>
   <div class="site-wrapper">
-    <section class="section-card">
-      <div class="section-title">Our Services</div>
-      <div class="faq-block">
-        <h3>Safe Name Transfers</h3>
-        <p>Our core service: safely transferring RuneScape display names between accounts using the safest timing and automation available. All transfers are done for <b>RuneScape gold only</b>—never real-world money.</p>
+    <div class="main-section">
+      <div class="card-section-title">Our Services</div>
+      <div class="card-list">
+        <div class="card-item">
+          <h3>Safe Name Transfers</h3>
+          <p>Our core service: safely transferring RuneScape display names between accounts using the safest timing and automation available. All transfers are done for <b>RuneScape gold only</b>—never real-world money.</p>
+        </div>
+        <div class="card-item">
+          <h3>Name Middlemanning</h3>
+          <p>Let us act as a trusted middleman for your gold-for-name trades. We protect both buyer and seller with full transparency and Discord ticket logging.</p>
+        </div>
+        <div class="card-item">
+          <h3>Sniper-Proof Monitoring</h3>
+          <p>We use proprietary software and human oversight to make sure your name is never exposed to public "sniping" bots during the transfer process.</p>
+        </div>
+        <div class="card-item">
+          <h3>Custom Consulting</h3>
+          <p>Unsure if your name is safe, or want to plan a large batch of transfers? Our experts offer guidance, planning, and hands-on assistance—always through our Discord ticket system.</p>
+        </div>
+        <div class="card-item">
+          <h3>Vouch & Verification System</h3>
+          <p>Every trade is logged and vouched in public Discord channels, so you always know you're dealing with a reputable, established service.</p>
+        </div>
       </div>
-      <div class="faq-block">
-        <h3>Name Middlemanning</h3>
-        <p>Let us act as a trusted middleman for your gold-for-name trades. We protect both buyer and seller with full transparency and Discord ticket logging.</p>
+      <div style="text-align:center;margin:2.2rem 0 0.7rem 0">
+        <a href="https://discord.gg/QP3s8qEcgA" class="cta" target="_blank">Start a Ticket Now</a>
       </div>
-      <div class="faq-block">
-        <h3>Sniper-Proof Monitoring</h3>
-        <p>We use proprietary software and human oversight to make sure your name is never exposed to public "sniping" bots during the transfer process.</p>
-      </div>
-      <div class="faq-block">
-        <h3>Custom Consulting</h3>
-        <p>Unsure if your name is safe, or want to plan a large batch of transfers? Our experts offer guidance, planning, and hands-on assistance—always through our Discord ticket system.</p>
-      </div>
-      <div class="faq-block">
-        <h3>Vouch &amp; Verification System</h3>
-        <p>Every trade is logged and vouched in public Discord channels, so you always know you’re dealing with a reputable, established service.</p>
-      </div>
-      <p style="margin-top:1.7rem; text-align:center;"><a href="https://discord.gg/QP3s8qEcgA" target="_blank" class="cta">Start a Ticket Now</a></p>
-    </section>
+    </div>
   </div>
   <footer>
-    <div class="footer-disclaimer">Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</div>
-    <div class="footer-copyright">&copy; 2025 NameScape - All Rights Reserved</div>
+    <div class="footer-disclaimer">
+      Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.
+    </div>
+    <div class="footer-copyright">
+      © 2025 NameScape - All Rights Reserved
+    </div>
   </footer>
+  <script>
+    // Mobile nav
+    const navLinksHtml = document.querySelector('.nav-links').innerHTML;
+    const navMobile = document.getElementById('navMobile');
+    navMobile.innerHTML = navLinksHtml;
+    const hamburger = document.getElementById('navHamburger');
+    hamburger.onclick = function () {
+      navMobile.classList.toggle('show');
+      hamburger.classList.toggle('open');
+    };
+    navMobile.querySelectorAll('.nav-link').forEach(link =>
+      link.addEventListener('click', () => navMobile.classList.remove('show'))
+    );
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 600) navMobile.classList.remove('show');
+    });
+  </script>
 </body>
 </html>
