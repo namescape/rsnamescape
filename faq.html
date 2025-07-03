@@ -3,80 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>FAQ | NameScape</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="navbar-container">
-      <span class="brand">NameScape</span>
-      <button class="hamburger" id="hamburger" aria-label="Open navigation">
-        <i class="fas fa-bars"></i>
-      </button>
+    <div class="nav-container">
+      <div class="brand">NameScape</div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="faq.html" class="nav-link active">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank">Discord</a></li>
+        <li><a href="index.html"      class="nav-link">Home</a></li>
+        <li><a href="about.html"      class="nav-link">About</a></li>
+        <li><a href="services.html"   class="nav-link">Services</a></li>
+        <li><a href="faq.html"        class="nav-link active">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" 
+               class="nav-link discord" target="_blank">Discord</a></li>
       </ul>
     </div>
   </nav>
-  <main>
-    <section class="page-card">
+
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+    <section class="card">
       <h1>Frequently Asked Questions</h1>
+
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is buying/selling RuneScape names bannable?</h3>
           <p>
-            Trading display names for <b>RuneScape gold only</b> is not against the RuneScape rules. Jagex prohibits real-world trading (RWT) for money or items outside the game, but gold-for-name trades are permitted. <b>We never facilitate RWT or account sales.</b>
+            Trading display names for <strong>RuneScape gold only</strong> is not against the RuneScape rules. Jagex prohibits real-world trading (RWT) for money or items outside the game, but gold-for-name trades are permitted. <strong>We never facilitate RWT or account sales.</strong>
           </p>
         </div>
+
         <div class="faq-item">
           <h3>How do I protect myself from “name snipers”?</h3>
           <p>
-            <b>Do NOT transfer a name yourself.</b> Sniping bots and scripts scan for new name releases 24/7 and will steal your name instantly. Only use a vetted, experienced transfer service like NameScape. We use proprietary timing and automation to ensure your transfer is safe and private.
+            <strong>Do NOT transfer a name yourself.</strong> Sniping bots and scripts scan for new name releases 24/7 and will steal your name instantly. Only use a vetted, experienced transfer service like NameScape.
           </p>
         </div>
+
         <div class="faq-item">
           <h3>How do I know I’m trading with a real admin?</h3>
           <p>
-            <b>Always make a ticket inside our Discord server.</b> Never trust DMs out of nowhere, even from users pretending to be staff—scammers copy our usernames and avatars. <b>We will never DM you first.</b> Tickets keep you safe from imposters.
+            <strong>Always make a ticket inside our Discord server.</strong> Never trust DMs out of nowhere, even from users pretending to be staff—scammers copy our usernames and avatars. <strong>We will never DM you first.</strong>
           </p>
         </div>
+
         <div class="faq-item">
           <h3>What payment methods do you allow?</h3>
           <p>
-            <b>RuneScape gold only.</b> We do not allow real money trading, accounts, or items. This keeps both you and us compliant with the game’s rules and safe from bans.
+            <strong>RuneScape gold only.</strong> We do not allow real money trading, accounts, or items. Keeps everyone safe and compliant with Jagex’s rules.
           </p>
         </div>
+
         <div class="faq-item">
           <h3>Can you transfer names between Old School and RS3?</h3>
           <p>
             Yes—our transferrers are experienced with both game versions. Please open a ticket for specific instructions and timing.
           </p>
         </div>
+
         <div class="faq-item">
           <h3>How do I start a safe name trade?</h3>
           <p>
-            Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and follow the instructions of a vetted admin. <b>Do not communicate outside of tickets.</b> All trades are logged and supported step by step.
+            Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and follow the instructions of a vetted admin. <strong>Do not communicate outside of tickets.</strong>
           </p>
         </div>
       </div>
     </section>
   </main>
-  <footer>
-    <div class="footer-legal">
-      <div>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</div>
-      <div>&copy; 2025 NameScape – All Rights Reserved</div>
-    </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-legal">
+    <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
+    <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
+
+  <!-- HAMBURGER SCRIPT -->
   <script>
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.onclick = () => navLinks.classList.toggle('show');
+    document.getElementById('hamburger')
+      .addEventListener('click', ()=>
+        document.getElementById('navLinks').classList.toggle('show')
+      );
   </script>
 </body>
-</
+</html>
