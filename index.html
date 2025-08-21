@@ -2,103 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NameScape | RuneScape Name Marketplace</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RuneScape Name Marketplace | Buy, Sell & Transfer Safely | NameScape</title>
+  <meta name="description" content="NameScape is a RuneScape name marketplace where you can buy, sell, and transfer display names safely using RuneScape gold. Vouched community, secure Discord tickets, sniper-resistant transfers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://rsnamescape.com/">
   <link rel="stylesheet" href="style.css">
-  <!-- FontAwesome for hamburger + arrows -->
+  <link rel="preload" href="assets/logo.png" as="image">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RuneScape Name Marketplace | NameScape">
+  <meta property="og:description" content="Buy, sell, and transfer RuneScape names safely with a vouched community and secure Discord tickets.">
+  <meta property="og:url" content="https://rsnamescape.com/">
+  <meta property="og:image" content="https://rsnamescape.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Organization + WebSite JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NameScape",
+    "url": "https://rsnamescape.com/",
+    "logo": "https://rsnamescape.com/assets/logo.png",
+    "sameAs": ["https://discord.gg/QP3s8qEcgA"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://rsnamescape.com/",
+    "name": "NameScape",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://rsnamescape.com/search?q={query}",
+      "query-input": "required name=query"
+    }
+  }
+  </script>
 </head>
 <body>
-
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary">
     <div class="nav-container">
-      <div class="brand">NameScape</div>
-      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <a href="index.html" class="brand" aria-label="NameScape Home">NameScape</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
         <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord">Discord</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank" rel="noopener">Discord</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- MAIN WRAPPER -->
+  <!-- BREADCRUMBS -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+    </ol>
+  </nav>
+
+  <!-- MAIN -->
   <main class="main-container">
-    <!-- HERO CARD -->
     <section class="card">
-      <img src="assets/logo.png" alt="NameScape Logo" class="main-banner">
+      <img src="assets/logo.png" alt="NameScape RuneScape Name Marketplace logo" class="main-banner" width="512" height="512" loading="eager">
       <h1>RuneScape Name Marketplace</h1>
-      <p class="subtitle">Buy, sell, and swap RuneScape names with our trusted Discord community.</p>
-      <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank">Join our Discord</a>
-      <div class="features-row">
+      <p class="subtitle">Buy, sell, and transfer RuneScape display names with a vouched, secure community.</p>
+      <p>We specialize in <a href="services.html#transfers">safe name transfers</a>, <a href="services.html#middleman">trusted middlemanning</a>, and <a href="faq.html#snipers">sniper-resistant methods</a>—all handled in <strong>Discord tickets</strong> and paid with <strong>RuneScape gold only</strong>.</p>
+      <a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank" rel="noopener" aria-label="Join our Discord to start a safe RuneScape name trade">Join our Discord</a>
+
+      <div class="features-row" aria-label="Trust features">
         <div class="feature">
-          <img src="assets/safe.svg" alt="Safe" class="feature-icon">
-          <div>Safe</div>
+          <img src="assets/safe.svg" alt="" class="feature-icon" width="48" height="48" loading="lazy"><div>Safe</div>
         </div>
         <div class="feature">
-          <img src="assets/trusted.svg" alt="Trusted" class="feature-icon">
-          <div>Trusted</div>
+          <img src="assets/trusted.svg" alt="" class="feature-icon" width="48" height="48" loading="lazy"><div>Trusted</div>
         </div>
         <div class="feature">
-          <img src="assets/fast.svg" alt="Fast" class="feature-icon">
-          <div>Fast</div>
+          <img src="assets/fast.svg" alt="" class="feature-icon" width="48" height="48" loading="lazy"><div>Fast</div>
         </div>
       </div>
     </section>
 
-    <!-- COMMUNITY CARD -->
     <section class="card">
-      <h2>Join our community with over <span class="highlight">2,000+ active members!</span></h2>
-      <p>Active since 2017 • Hundreds of vouches • Fastest swaps!</p>
+      <h2>Join our community of <span class="highlight">2,000+ members</span></h2>
+      <p>Active since 2017 • Hundreds of public vouches • Fastest swaps</p>
+      <p><a href="about.html" class="text-link">Learn more about NameScape</a> or explore our <a href="services.html" class="text-link">RuneScape name transfer services</a>.</p>
     </section>
 
-    <!-- TRUSTPILOT CARD -->
     <section class="card">
       <h2>Trusted by the Name Trading Community</h2>
-      <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank">
-        <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg"
-             alt="Trustpilot" class="trustpilot-logo">
+      <a href="https://www.trustpilot.com/review/rsnamescape.com" target="_blank" rel="noopener" aria-label="View NameScape on Trustpilot">
+        <img src="https://cdn.trustpilot.net/brand-assets/4.2.0/logo-white.svg" alt="Trustpilot logo" class="trustpilot-logo" width="180" height="32" loading="lazy">
       </a>
-      <p class="trust-desc"><em>Reviews coming soon! Meanwhile, check our Discord vouches.</em></p>
+      <p class="trust-desc"><em>Collecting external reviews. Meanwhile, see Discord vouches below.</em></p>
     </section>
 
-    <!-- VOUCHES CAROUSEL CARD -->
     <section class="card">
-      <h2>Some Discord Vouches</h2>
-      <div class="vouch-carousel">
-        <img src="assets/vouches/1.png" id="vouchImg" class="vouch-img" alt="Discord Vouch">
+      <h2>Recent Discord Vouches</h2>
+      <div class="vouch-carousel" aria-live="polite">
+        <img src="assets/vouches/1.png" id="vouchImg" class="vouch-img" alt="Customer vouch screenshot 1" width="640" height="360" loading="lazy">
         <div class="vouch-controls">
-          <button id="prev-vouch" class="arrow-btn"><i class="fa fa-arrow-left"></i></button>
-          <button id="next-vouch" class="arrow-btn"><i class="fa fa-arrow-right"></i></button>
+          <button id="prev-vouch" class="arrow-btn" aria-label="Previous vouch"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+          <span id="vouch-counter" class="vouch-counter" aria-live="polite">1 / 14</span>
+          <button id="next-vouch" class="arrow-btn" aria-label="Next vouch"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
         </div>
       </div>
+      <p><a href="faq.html#authenticity" class="text-link">How we verify admins and prevent imposters</a></p>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer-legal">
     <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
     <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script>
-    // Hamburger toggle
+    // Hamburger
     document.getElementById('hamburger')
       .addEventListener('click', ()=> document.getElementById('navLinks').classList.toggle('show'));
 
     // Vouch carousel
     const vouches = Array.from({length:14}, (_,i)=>`assets/vouches/${i+1}.png`);
     let idx = 0;
-    const img = document.getElementById('vouchImg'),
-          ctr = document.getElementById('vouch-counter');
-    document.getElementById('prev-vouch')
-      .onclick = ()=>{ idx=(idx-1+vouches.length)%vouches.length; img.src=vouches[idx]; ctr.textContent=`${idx+1} / ${vouches.length}`; };
-    document.getElementById('next-vouch')
-      .onclick = ()=>{ idx=(idx+1)%vouches.length; img.src=vouches[idx]; ctr.textContent=`${idx+1} / ${vouches.length}`; };
+    const img = document.getElementById('vouchImg');
+    const ctr = document.getElementById('vouch-counter');
+    function setVouch(i){ img.src = vouches[i]; img.alt = `Customer vouch screenshot ${i+1}`; ctr.textContent = `${i+1} / ${vouches.length}`; }
+    document.getElementById('prev-vouch').onclick = ()=>{ idx=(idx-1+vouches.length)%vouches.length; setVouch(idx); };
+    document.getElementById('next-vouch').onclick = ()=>{ idx=(idx+1)%vouches.length; setVouch(idx); };
   </script>
 </body>
 </html>
