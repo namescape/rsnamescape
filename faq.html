@@ -2,93 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FAQ | NameScape</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RuneScape Name Trading FAQ | Safe Transfers & Anti-Sniping | NameScape</title>
+  <meta name="description" content="NameScape answers the most common RuneScape name trading questions: is it bannable, how to avoid name snipers, payment methods, cross-version transfers, and ticket safety.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://rsnamescape.com/faq.html">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Breadcrumb + FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  { "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://rsnamescape.com/"},
+      {"@type":"ListItem","position":2,"name":"FAQ","item":"https://rsnamescape.com/faq.html"}
+    ] }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is buying/selling RuneScape names bannable?",
+        "acceptedAnswer":{"@type":"Answer","text":"Trading display names for RuneScape gold only is permitted. We never facilitate real-world trading or account sales."}
+      },
+      {
+        "@type":"Question",
+        "name":"How do I protect myself from name snipers?",
+        "acceptedAnswer":{"@type":"Answer","text":"Do not attempt transfers yourself. Use a vetted transfer service inside a Discord ticket with sniper-resistant methods."}
+      },
+      {
+        "@type":"Question",
+        "name":"How do I know I’m trading with a real admin?",
+        "acceptedAnswer":{"@type":"Answer","text":"Open a ticket inside our Discord server. We never DM first. Verify roles and ticket IDs before proceeding."}
+      },
+      {
+        "@type":"Question",
+        "name":"What payment methods do you allow?",
+        "acceptedAnswer":{"@type":"Answer","text":"RuneScape gold only. No real-world money trading, items outside the game, or account sales."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can you transfer names between Old School and RS3?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Our team supports both OSRS and RS3 with instructions and timing guidance shared in your ticket."}
+      },
+      {
+        "@type":"Question",
+        "name":"How do I start a safe name trade?",
+        "acceptedAnswer":{"@type":"Answer","text":"Join our Discord, open a ticket, and follow admin instructions. Keep all communication inside the ticket."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary">
     <div class="nav-container">
-      <div class="brand">NameScape</div>
-      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <a href="index.html" class="brand" aria-label="NameScape Home">NameScape</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"      class="nav-link">Home</a></li>
-        <li><a href="about.html"      class="nav-link">About</a></li>
-        <li><a href="services.html"   class="nav-link">Services</a></li>
-        <li><a href="faq.html"        class="nav-link active">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" 
-               class="nav-link discord" target="_blank">Discord</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank" rel="noopener">Discord</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">FAQ</li>
+    </ol>
+  </nav>
+
   <main class="main-container">
     <section class="card">
       <h1>Frequently Asked Questions</h1>
 
       <div class="faq-list">
-        <div class="faq-item">
-          <h3>Is buying/selling RuneScape names bannable?</h3>
-          <p>
-            Trading display names for <strong>RuneScape gold only</strong> is not against the RuneScape rules. Jagex prohibits real-world trading (RWT) for money or items outside the game, but gold-for-name trades are permitted. <strong>We never facilitate RWT or account sales.</strong>
-          </p>
+        <div class="faq-item" id="bannable">
+          <h2>Is buying/selling RuneScape names bannable?</h2>
+          <p>Trading display names for <strong>RuneScape gold only</strong> is not against the RuneScape rules. Jagex prohibits real-world trading (RWT) for cash or out-of-game items. <strong>We never facilitate RWT or account sales.</strong></p>
         </div>
 
-        <div class="faq-item">
-          <h3>How do I protect myself from “name snipers”?</h3>
-          <p>
-            <strong>Do NOT transfer a name yourself.</strong> Sniping bots and scripts scan for new name releases 24/7 and will steal your name instantly. Only use a vetted, experienced transfer service like NameScape.
-          </p>
+        <div class="faq-item" id="snipers">
+          <h2>How do I protect myself from “name snipers”?</h2>
+          <p><strong>Do not transfer a name yourself.</strong> Sniping bots monitor name releases 24/7. Only use a vetted, experienced transfer service like NameScape. See <a href="services.html#sniper-proof">our sniper-resistant approach</a>.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>How do I know I’m trading with a real admin?</h3>
-          <p>
-            <strong>Always make a ticket inside our Discord server.</strong> Never trust DMs out of nowhere, even from users pretending to be staff; scammers copy our usernames and avatars. <strong>We will never DM you first.</strong>
-          </p>
+        <div class="faq-item" id="authenticity">
+          <h2>How do I know I’m trading with a real admin?</h2>
+          <p><strong>Always open a ticket inside our Discord server.</strong> Never trust unsolicited DMs—even if the profile looks identical to staff. <strong>We never DM first.</strong> Verify roles in-server and confirm ticket IDs.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>What payment methods do you allow?</h3>
-          <p>
-            <strong>RuneScape gold only.</strong> We do not allow real money trading, accounts, or items. Keeps everyone safe and compliant with Jagex’s rules.
-          </p>
+        <div class="faq-item" id="payment">
+          <h2>What payment methods do you allow?</h2>
+          <p><strong>RuneScape gold only.</strong> No real-world money, no account sales, no out-of-game items.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>Can you transfer names between Old School and RS3?</h3>
-          <p>
-            Yes, our transferrers are experienced with both game versions. Please open a ticket for specific instructions and timing.
-          </p>
+        <div class="faq-item" id="cross-version">
+          <h2>Can you transfer names between Old School and RS3?</h2>
+          <p>Yes—our transferrers support both OSRS and RS3. Open a ticket for step-by-step instructions and timing windows.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>How do I start a safe name trade?</h3>
-          <p>
-            Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and follow the instructions of a vetted admin. <strong>Do not communicate outside of tickets.</strong>
-          </p>
+        <div class="faq-item" id="tickets">
+          <h2>How do I start a safe name trade?</h2>
+          <p>Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank" rel="noopener">Discord</a>, open a ticket, and follow the instructions of a vetted admin. <strong>Keep all communication inside tickets.</strong></p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer-legal">
     <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
     <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
 
-  <!-- HAMBURGER SCRIPT -->
   <script>
     document.getElementById('hamburger')
-      .addEventListener('click', ()=>
-        document.getElementById('navLinks').classList.toggle('show')
-      );
+      .addEventListener('click', ()=> document.getElementById('navLinks').classList.toggle('show'));
   </script>
 </body>
 </html>
