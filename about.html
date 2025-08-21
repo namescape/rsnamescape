@@ -2,65 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | NameScape</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About NameScape | Safe RuneScape Name Trading & Transfers</title>
+  <meta name="description" content="Learn how NameScape runs safe, vouched RuneScape name trades using secure Discord tickets and sniper-resistant transfer methods. RuneScape gold only—no RWT.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://rsnamescape.com/about.html">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  { "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://rsnamescape.com/"},
+      {"@type":"ListItem","position":2,"name":"About","item":"https://rsnamescape.com/about.html"}
+    ] }
+  </script>
 </head>
 <body>
-
-  <!-- NAVBAR (identical to index.html) -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary">
     <div class="nav-container">
-      <div class="brand">NameScape</div>
-      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <a href="index.html" class="brand" aria-label="NameScape Home">NameScape</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"      class="nav-link">Home</a></li>
-        <li><a href="about.html"      class="nav-link active">About</a></li>
-        <li><a href="services.html"   class="nav-link">Services</a></li>
-        <li><a href="faq.html"        class="nav-link">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" 
-               class="nav-link discord" target="_blank">Discord</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank" rel="noopener">Discord</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">About</li>
+    </ol>
+  </nav>
+
   <main class="main-container">
     <section class="card">
       <h1>About NameScape</h1>
-      <p>
-        <strong>NameScape</strong> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2021, we help players safely buy, sell, and swap display names using <strong>RuneScape gold only</strong>—never real-world trading, cash, or accounts.
-      </p>
+      <p><strong>NameScape</strong> is a RuneScape name trading and transfer community focused on transparency, safety, and trust. Founded in 2017, we help players safely buy, sell, and swap display names using <strong>RuneScape gold only</strong>—never real-world money or account sales.</p>
       <ul>
-        <li>Trusted by thousands of RuneScape name traders</li>
+        <li>Vouched by hundreds of RuneScape traders</li>
         <li>All services handled in secure Discord tickets</li>
         <li>Zero tolerance for scammers and imposters</li>
-        <li>No DMs from staff—ever. Tickets only.</li>
-        <li>All trades are transparent and publicly vouched</li>
+        <li>No unsolicited DMs from staff—tickets only</li>
+        <li>Public vouches with proof for every trade</li>
       </ul>
-      <p>
-        Our team consists of experienced, vetted transferrers who use the safest methods to protect your display name from snipers. 
-      </p>
-      <p>
-        <strong>Ready to get started?</strong> Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank">Discord</a>, open a ticket, and let our team take care of the rest.
-      </p>
+      <p>Our vetted transferrers use proven, sniper-resistant methods. New to name trading? Start with our <a href="faq.html" class="text-link">RuneScape name trading FAQ</a> or see our <a href="services.html" class="text-link">services</a>.</p>
+      <p><strong>Ready to get started?</strong> Join our <a href="https://discord.gg/QP3s8qEcgA" target="_blank" rel="noopener">Discord</a>, open a ticket, and we’ll handle the rest.</p>
     </section>
   </main>
 
-  <!-- FOOTER (same as index.html) -->
   <footer class="footer-legal">
     <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
     <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
 
-  <!-- HAMBURGER SCRIPT -->
   <script>
     document.getElementById('hamburger')
-      .addEventListener('click', ()=>
-        document.getElementById('navLinks').classList.toggle('show')
-      );
+      .addEventListener('click', ()=> document.getElementById('navLinks').classList.toggle('show'));
   </script>
 </body>
 </html>
