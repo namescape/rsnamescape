@@ -2,86 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Services | NameScape</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services | Safe RuneScape Name Transfers & Middleman | NameScape</title>
+  <meta name="description" content="Safe RuneScape name transfers, trusted middleman services, sniper-resistant methods, and public vouch verification. All trades via Discord tickets for RuneScape gold only.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://rsnamescape.com/services.html">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Breadcrumb + ItemList JSON-LD -->
+  <script type="application/ld+json">
+  { "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://rsnamescape.com/"},
+      {"@type":"ListItem","position":2,"name":"Services","item":"https://rsnamescape.com/services.html"}
+    ] }
+  </script>
+  <script type="application/ld+json">
+  { "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"NameScape Services",
+    "itemListElement":[
+      {"@type":"Service","name":"Safe Name Transfers","url":"https://rsnamescape.com/services.html#transfers"},
+      {"@type":"Service","name":"Trusted Middlemanning","url":"https://rsnamescape.com/services.html#middleman"},
+      {"@type":"Service","name":"Sniper-Resistant Methods","url":"https://rsnamescape.com/services.html#sniper-proof"},
+      {"@type":"Service","name":"Custom Consulting","url":"https://rsnamescape.com/services.html#consulting"},
+      {"@type":"Service","name":"Vouch & Verification","url":"https://rsnamescape.com/services.html#vouches"}
+    ] }
+  </script>
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary">
     <div class="nav-container">
-      <div class="brand">NameScape</div>
-      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <a href="index.html" class="brand" aria-label="NameScape Home">NameScape</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"      class="nav-link">Home</a></li>
-        <li><a href="about.html"      class="nav-link">About</a></li>
-        <li><a href="services.html"   class="nav-link active">Services</a></li>
-        <li><a href="faq.html"        class="nav-link">FAQ</a></li>
-        <li><a href="https://discord.gg/QP3s8qEcgA" 
-               class="nav-link discord" target="_blank">Discord</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="https://discord.gg/QP3s8qEcgA" class="nav-link discord" target="_blank" rel="noopener">Discord</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Services</li>
+    </ol>
+  </nav>
+
   <main class="main-container">
     <section class="card">
       <h1>Our Services</h1>
 
       <div class="faq-list">
-        <div class="faq-item">
-          <h3>Safe Name Transfers</h3>
-          <p>
-            Our core service: safely transferring RuneScape display names between accounts using the most secure transfer methods. All transfers are done for <strong>RuneScape gold only</strong>; never real-world money.
-          </p>
+        <div class="faq-item" id="transfers">
+          <h2>Safe Name Transfers</h2>
+          <p>We securely transfer RuneScape display names between accounts using the most reliable, sniper-resistant methods. Payment is <strong>RuneScape gold only</strong>—no RWT, no account sales.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>Name Middlemanning</h3>
-          <p>
-            Let us act as a trusted middleman for your name sales. We protect both buyer and seller with full transparency and Discord ticket logging.
-          </p>
+        <div class="faq-item" id="middleman">
+          <h2>Trusted Middlemanning</h2>
+          <p>Let us act as a neutral, vouched third party. We protect both buyer and seller in a <a href="faq.html#tickets">Discord ticket</a> with transparent, timestamped logs.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>Sniper-Proof Transfer</h3>
-          <p>
-            We use proven methods to transfer your name and even insure both parties. 
-          </p>
+        <div class="faq-item" id="sniper-proof">
+          <h2>Sniper-Resistant Methods</h2>
+          <p>Our team employs practices that minimize exposure to sniping bots during release windows. See <a href="faq.html#snipers">how to avoid name snipers</a>.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>Custom Consulting</h3>
-          <p>
-            Unsure if your name is valuable? Our experts offer guidance and hands-on assistance through our Discord ticketing system.
-          </p>
+        <div class="faq-item" id="consulting">
+          <h2>Custom Consulting</h2>
+          <p>Unsure of value or timing? We provide guidance on pricing, timing windows, and safe flow—directly in your ticket.</p>
         </div>
 
-        <div class="faq-item">
-          <h3>Vouch &amp; Verification System</h3>
-          <p>
-            Every trade is logged and vouched in public Discord channels, so you always know you’re dealing with a reputable, established service.
-          </p>
+        <div class="faq-item" id="vouches">
+          <h2>Vouch &amp; Verification System</h2>
+          <p>Every trade is logged and vouched in public Discord channels. Learn <a href="faq.html#authenticity">how we verify real admins</a> and avoid impersonators.</p>
         </div>
       </div>
+
+      <p><a href="https://discord.gg/QP3s8qEcgA" class="cta-btn" target="_blank" rel="noopener">Open a Ticket</a></p>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer-legal">
     <p>Not affiliated with Jagex or Nintendo. Pokémon art is for branding only.</p>
     <p>&copy; 2025 NameScape – All Rights Reserved</p>
   </footer>
 
-  <!-- HAMBURGER SCRIPT -->
   <script>
     document.getElementById('hamburger')
-      .addEventListener('click', ()=>
-        document.getElementById('navLinks').classList.toggle('show')
-      );
+      .addEventListener('click', ()=> document.getElementById('navLinks').classList.toggle('show'));
   </script>
 </body>
 </html>
